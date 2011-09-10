@@ -283,15 +283,17 @@ class User {
 			return false;
 		}
 
-		# Try cache
-		$key = wfMemcKey( 'user', 'id', $this->mId );
-		$data = $wgMemc->get( $key );
-		if ( !is_array( $data ) || $data['mVersion'] < MW_USER_VERSION ) {
-			# Object is expired, load from DB
-			$data = false;
-		}
+                // [2011-09-08 bas]
+                //      Disable caching of users
+		// # Try cache
+		// $key = wfMemcKey( 'user', 'id', $this->mId );
+		// $data = $wgMemc->get( $key );
+		// if ( !is_array( $data ) || $data['mVersion'] < MW_USER_VERSION ) {
+		// 	# Object is expired, load from DB
+		// 	$data = false;
+		// }
 
-		if ( !$data ) {
+		// if ( !$data ) {
 			wfDebug( "Cache miss for user {$this->mId}\n" );
 			# Load from DB
 			if ( !$this->loadFromDatabase() ) {
@@ -299,13 +301,13 @@ class User {
 				return false;
 			}
 			$this->saveToCache();
-		} else {
-			wfDebug( "Got user {$this->mId} from cache\n" );
-			# Restore from cache
-			foreach ( self::$mCacheVars as $name ) {
-				$this->$name = $data[$name];
-			}
-		}
+		// } else {
+		// 	wfDebug( "Got user {$this->mId} from cache\n" );
+		// 	# Restore from cache
+		// 	foreach ( self::$mCacheVars as $name ) {
+		// 		$this->$name = $data[$name];
+		// 	}
+		// }
 		return true;
 	}
 
