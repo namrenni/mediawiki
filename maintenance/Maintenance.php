@@ -395,7 +395,10 @@ abstract class Maintenance {
 
 		# Set the memory limit
 		# Note we need to set it again later in cache LocalSettings changed it
-		ini_set( 'memory_limit', $this->memoryLimit() );
+		$preferredMemoryLimit = $this->memoryLimit();
+		if(ini_get('memory_limit') != $preferredMemoryLimit) {
+			ini_set( 'memory_limit', $preferredMemoryLimit );
+		}
 
 		# Set max execution time to 0 (no limit). PHP.net says that
 		# "When running PHP from the command line the default setting is 0."
