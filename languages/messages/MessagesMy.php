@@ -18,8 +18,10 @@
  * @author Myolay
  * @author Parabaik
  * @author Purodha
+ * @author Saiddzone
  * @author Thanlwin
  * @author Thitaung
+ * @author Umherirrender
  * @author Zawthet
  * @author ကိုရာဝီ
  */
@@ -43,14 +45,14 @@ $datePreferences = array(
 	'my long',
 	'ISO 8601',
 );
- 
+
 $defaultDateFormat = 'my normal';
- 
+
 $dateFormats = array(
 	'my normal time' => 'H:i',
 	'my normal date' => 'j F Y',
 	'my normal both' => ' H:i"၊" j F Y',
- 
+
 	'my long time' => 'H:i',
 	'my long date' => 'Y "ဇန်နဝါရီ" F"လ" j "ရက်"',
 	'my long both' => 'H:i"၊" Y "ဇန်နဝါရီ" F"လ" j "ရက်"',
@@ -68,7 +70,7 @@ $messages = array(
 'tog-numberheadings'         => 'ခေါင်းစဉ်များ အား စေ့ဆော်ချက်အတိုင်း လုပ်ဆောင်ရန်',
 'tog-showtoolbar'            => 'ပြုပြင်ရန် ကိရိယာများ (JavaScript လိုအပ်သည်)',
 'tog-editondblclick'         => 'ကလစ်နှစ်ခါနှိပ်လျှင် စာမျက်နှာအားပြုပြင်ပါ (JavaScript လိုအပ်သည်)',
-'tog-rememberpassword'       => 'ဤ​ကွန်​ပျူ​တာ​တွင်​ကျွန်​တော့​ကို​မှတ်​ထား​ပါ​',
+'tog-rememberpassword'       => 'ဤကွန်ပျူတာတွင် ကျွန်ုပ်ကိုမှတ်ထားရန် (အများဆုံး $1 {{PLURAL:$1|ရက်|ရက်}}ကြာ)',
 'tog-watchcreations'         => 'ကျွန်ုပ်စတင်ရေးသားခဲ့သည့်စာမျက်နှာများကို စောင့်​ကြည့်​စာ​ရင်း​ထဲ ပေါင်းထည့်ပါ',
 'tog-watchdefault'           => 'ကျွန်ုပ် တည်းဖြတ်ခဲ့သည့် စာမျက်နှာများကို စောင့်ကြည့်စာရင်းသို့  ပေါင်းထည့်ပါ။',
 'tog-watchmoves'             => 'ကျွန်ုပ်ရွှေ့လိုက်သော စာမျက်နှာများကို စောင့်ကြည့်စာရင်းသို့ ပေါင်းထည့်ရန်',
@@ -83,6 +85,7 @@ $messages = array(
 'tog-enotifrevealaddr'       => ' အသိပေးချက်အီးမေးများတွင် ကျွန်ုပ်၏ အီးမေးလိပ်စာကို ဖော်ပြရန်',
 'tog-shownumberswatching'    => 'စောင့်ကြည့်နေသော အသုံးပြုသူအရေအတွက်ကို ပြရန်',
 'tog-oldsig'                 => 'ရှိနှင့်ပြီးသား လက်မှတ်၏ နမူနာ -',
+'tog-forceeditsummary'       => 'တည်းဖြတ်အတိုချုပ် ဗလာဖြစ်နေလျှင် သတိပေးရန်',
 'tog-watchlisthideown'       => 'ကျွန်ုပ်၏ တည်းဖြတ်မှုများကို စောင့်ကြည့်စာရင်းမှ ဝှက်ထားရန်',
 'tog-watchlisthidebots'      => 'ဘော့တည်းဖြတ်မှုများကို စောင့်ကြည့်စာရင်းမှ ဝှက်ထားရန်',
 'tog-watchlisthideminor'     => 'အရေးမကြီးသော တည်းဖြတ်မှုများကို စောင့်ကြည့်စာရင်းမှ ဝှက်ထားရန်',
@@ -169,8 +172,7 @@ $messages = array(
 'listingcontinuesabbrev'   => 'ပံ့ပိုး',
 'index-category'           => 'အက္ခရာစဉ် စာမျက်နှာများ',
 'noindex-category'         => 'အက္ခရာစဉ် စာမျက်နှာများမရှိ',
-
-'mainpagetext' => "'''မီဒီယာဝီကီကို အောင်မြင်စွာ သွင်းပြီးပါပြီ။'''",
+'broken-file-category'     => 'ကျိုးပျက်နေသော ဖိုင်လင့်များပါသည့် စာမျက်နှာများ',
 
 'about'         => 'အကြောင်း',
 'article'       => 'စာမျက်နှာ',
@@ -195,29 +197,20 @@ $messages = array(
 'faqpage'        => 'Project:မေးလေ့ရှိကြသည်များ',
 
 # Vector skin
-'vector-action-addsection'   => 'အကြောင်းအရာအသစ် ထပ်ထည့်ရန်',
-'vector-action-delete'       => 'ဖျက်​ပါ​',
-'vector-action-move'         => 'ရွှေ့ပါ',
-'vector-action-protect'      => 'ထိမ်း​သိမ်း​ပါ​',
-'vector-action-undelete'     => 'မဖျက်တော့ရန်',
-'vector-action-unprotect'    => 'မကာကွယ်တော့ရန်',
-'vector-namespace-image'     => 'ဖိုင်',
-'vector-namespace-main'      => 'စာမျက်နှာ',
-'vector-namespace-media'     => 'မီဒီယာ စာမျက်နှာ',
-'vector-namespace-mediawiki' => 'စာသား',
-'vector-namespace-project'   => 'ပရောဂျက်စာမျက်နှာ',
-'vector-namespace-special'   => 'အထူးစာမျက်နှာ',
-'vector-namespace-talk'      => 'ဆွေးနွေးချက်များ',
-'vector-namespace-template'  => 'တမ်းပလိတ်',
-'vector-namespace-user'      => 'အ​သုံး​ပြု​သူ​၏ ​စာ​မျက်​နှာ​',
-'vector-view-create'         => 'စတင်ရေးသားရန်',
-'vector-view-edit'           => 'ပြင်ရန်',
-'vector-view-history'        => 'ရာဇဝင်ကြည့်ရန်',
-'vector-view-view'           => 'ဖတ်ရန်',
-'vector-view-viewsource'     => 'ရင်းမြစ်ကို ကြည့်ရန်',
-'actions'                    => 'ဆောင်ရွက်ချက်များ',
-'namespaces'                 => 'အမည်ညွှန်းများ',
-'variants'                   => 'အမျိုးမျိုးအပြားပြား',
+'vector-action-addsection' => 'အကြောင်းအရာအသစ် ထပ်ထည့်ရန်',
+'vector-action-delete'     => 'ဖျက်​ပါ​',
+'vector-action-move'       => 'ရွှေ့ပါ',
+'vector-action-protect'    => 'ထိမ်း​သိမ်း​ပါ​',
+'vector-action-undelete'   => 'မဖျက်တော့ရန်',
+'vector-action-unprotect'  => 'မကာကွယ်တော့ရန်',
+'vector-view-create'       => 'စတင်ရေးသားရန်',
+'vector-view-edit'         => 'ပြင်ရန်',
+'vector-view-history'      => 'ရာဇဝင်ကြည့်ရန်',
+'vector-view-view'         => 'ဖတ်ရန်',
+'vector-view-viewsource'   => 'ရင်းမြစ်ကို ကြည့်ရန်',
+'actions'                  => 'ဆောင်ရွက်ချက်များ',
+'namespaces'               => 'အမည်ညွှန်းများ',
+'variants'                 => 'အမျိုးမျိုးအပြားပြား',
 
 'errorpagetitle'    => 'အမှား',
 'returnto'          => '$1 သို့ ပြန်သွားရန်။',
@@ -230,10 +223,10 @@ $messages = array(
 'history'           => 'စာမျက်နှာ ရာဇဝင်',
 'history_short'     => 'ရာဇဝင်',
 'updatedmarker'     => 'နောက်ဆုံးထာကြည့်ပြီးသည့်နောက်ပိုင်း တည်းဖြတ်ထားသည်။',
-'info_short'        => 'သတင်းအချက်အလက်',
 'printableversion'  => 'ပရင့်ထုတ်ရန်',
 'permalink'         => 'ပုံ​သေ​လိပ်​စာ​',
 'print'             => 'ပရင့်',
+'view'              => 'ကြည့်ရန်',
 'edit'              => 'ပြင်​ဆင်​ရန်​',
 'create'            => 'စတင်ရေးသားရန်',
 'editthispage'      => 'ဤစာမျက်နှာကို ပြင်ရန်',
@@ -241,6 +234,7 @@ $messages = array(
 'delete'            => 'ဖျက်​ပါ​',
 'deletethispage'    => 'ဤစာမျက်နှာဖျက်ပါ',
 'undelete_short'    => '{{PLURAL:$1|တည်းဖြတ်မှုတစ်ခု|တည်းဖြတ်မှု $1 ခုတို့}}ကို မဖျက်တော့ရန်',
+'viewdeleted_short' => '{{PLURAL:$1|ဖျက်လိုက်သည့်တည်းဖြတ်မှုတစ်ခု|ဖျက်လိုက်သည့် တည်းဖြတ်မှု $1 ခု}}ကို ကြည့်ရန်',
 'protect'           => 'ထိမ်း​သိမ်း​ပါ​',
 'protect_change'    => 'ပြောင်းလဲရန်',
 'protectthispage'   => 'ဤစာမျက်နှာကို ကာကွယ်ရန်',
@@ -273,6 +267,12 @@ $messages = array(
 'jumpto'            => 'ဤနေရာသို့သွားရန် -',
 'jumptonavigation'  => 'အ​ညွှန်း​',
 'jumptosearch'      => 'ရှာ​ဖွေ​ရန်​',
+'view-pool-error'   => 'ဆာဗာသည် ယခုအချိန်တွင် မမျှသောဝန်ကို ထမ်းနေရသည်။
+အသုံးပြုသူ အမြောက်အများက ဤစာမျက်နှာကို ကြည့်ရှုရန် ကြိုးပမ်းနေကြသည်။
+ဤစာမျက်နှာကို နောက်တစ်ကြိမ် ပြန်မကြည့်မီ ခဏတာမျှ စောင့်ပါ။
+
+$1',
+'pool-errorunknown' => 'အမည်မသိအမှား',
 
 # All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
 'aboutsite'            => '{{SITENAME}} အကြောင်း',
@@ -289,12 +289,16 @@ $messages = array(
 'mainpage'             => 'ဗဟိုစာမျက်နှာ',
 'mainpage-description' => 'ဗ​ဟို​စာ​မျက်​နှာ​',
 'policy-url'           => 'Project:မူ​ဝါ​ဒ',
-'portal'               => 'စုစည်းဆွေးနွေးရာ',
-'portal-url'           => 'Project:စုစည်းဆွေးနွေးရာ',
+'portal'               => 'ပေါင်းကူးနေရာ',
+'portal-url'           => 'Project:ပေါင်းကူးနေရာ',
 'privacy'              => 'ကိုယ်ပိုင်ရေးရာ မူဝါဒ',
 'privacypage'          => 'Project: ကိုယ်ပိုင်ရေးရာ မူဝါဒ',
 
 'badaccess' => 'ခွင့်ပြုချက်မှ အမှား',
+
+'versionrequired'     => 'မီဒီယာဝီကီဗာရှင်း $1 လိုအပ်သည်',
+'versionrequiredtext' => 'ဤစာမျက်နှာကို ကြည့်ရန် မီဒီယာဝီကီဗာရှင်း $1 လိုအပ်သည်။
+[[Special:Version|ဗားရှင်းစာမျက်နှာ]]ကို ကြည့်ပါ။',
 
 'ok'                      => 'အိုကေ',
 'retrievedfrom'           => '"$1" မှ ရယူရန်',
@@ -311,6 +315,8 @@ $messages = array(
 'toc'                     => 'မာတိကာ',
 'showtoc'                 => 'ပြ',
 'hidetoc'                 => 'ဝှက်',
+'collapsible-collapse'    => 'ချုံ့ရန်',
+'collapsible-expand'      => 'ချဲ့ရန်',
 'thisisdeleted'           => '$1 ကို ကြည့်မည်လော (သို့) restore ပြန်သိမ်းမည်လော။',
 'viewdeleted'             => '$1 ကို ကြည့်မည်လော။',
 'restorelink'             => '{{PLURAL:$1|ဖျက်လိုက်သည့်တည်းဖြတ်မှုတစ်ခု|ဖျက်လိုက်သည့် တည်းဖြတ်မှု $1 ခု}}',
@@ -319,6 +325,8 @@ $messages = array(
 'page-rss-feed'           => 'RSS feed "$1" ခု',
 'page-atom-feed'          => 'Atom feed "$1" ခု',
 'red-link-title'          => '$1 (ဤစာမျက်နှာ မရှိပါ)',
+'sort-descending'         => 'အစဉ်လိုက်စီရန်',
+'sort-ascending'          => 'အစဉ်လိုက် ပြောင်းပြန်စီရန်',
 
 # Short words for each namespace, by default used in the namespace tab in monobook
 'nstab-main'      => 'စာ​မျက်​နှာ​',
@@ -339,6 +347,7 @@ $messages = array(
 # General errors
 'error'                => 'အမှား',
 'databaseerror'        => 'ဒေတာဘေ့စ် အမှား',
+'readonly'             => 'ဒေတာဘေ့စ် ပိတ်ထားသည်။',
 'missing-article'      => 'စာမျက်နှာ "$1" မှ $2 ကို ရှာတွေ့သင့်သည်ဖြစ်သော်လည်း ဒေတာဘေ့(စ်) သည် ရှာမတွေ့ပါ။
 
 ယင်းသည် ဖျက်ထားပြီးသား diff သို့မဟုတ် မှတ်တမ်းလင့် တစ်ခုကြောင့် ဖြစ်လေ့ရှိသည်။
@@ -359,69 +368,77 @@ $messages = array(
 'badtitletext'         => 'တောင်းဆိုထားသော စာမျက်နှာ ခေါင်းစဉ်သည် တရားမဝင်ပါ (သို့) ဗလာဖြစ်နေသည် (သို့) အခြားဘာသာများ(inter-language or inter-wiki title)သို့ မှားယွင်းစွာ လင့်ချိတ်ထားသည်။',
 'viewsource'           => 'ရင်းမြစ်ကို ကြည့်ရန်',
 'viewsourcefor'        => '$1 အတွက်',
+'protectedpagetext'    => 'ဤစာမျက်နှာအား တည်းဖြတ်မရနိုင်ရန် ထိန်းသိမ်းထားသည်။',
 'namespaceprotected'   => "'''$1''' စာညွှန်းဖြင့် စာမျက်နှာကို တည်းဖြတ်ရန် ခွင့်ပြုချက် မရှိပါ။",
-'customcssjsprotected' => 'အခြားအသုံးပြုသူ၏ ကိုယ်ရေးအချက်အလက်များ ပါဝင်သည့်အတွက် သင်ပြင်ဆင်ခွင့်မရှိပါ။',
 'ns-specialprotected'  => 'အထူးစာမျက်နှာများကို တည်းဖြတ်မရနိုင်ပါ။',
 
 # Virus scanner
 'virus-unknownscanner' => 'အမည်မသိအန်တီဗိုင်းရပ်စ် -',
 
 # Login and logout pages
-'welcomecreation'         => '== မင်္ဂလာပါ $1! ==
+'logouttext'               => 'သင်သည် လော့ဂ်အောက် လုပ်လိုက်ပြီဖြစ်သည်။
+သင့်အနေနှင့် ဤ {{SITENAME}} ဝက်ဘ်ဆိုက်ဒ်ကို အမည်မသိ အသုံးပြုသူ အနေနှင့် ဆက်လက် အသုံးပြုနိုင်သည်။ သို့မဟုတ် ယခင် အသုံးပြုသူ အမည် သို့ အသုံးပြုသူ အခြားအမည်တစ်ခုဖြင့် [[Special:UserLogin|နောက်တစ်ကြိမ် လော့ဂ်အင်ပြန်ဝင်]] နိုင်သည်။
+သင်၏ ဘရောက်ဆာမှ cache ကို ရှင်းလင်းသည့် အချိန် အထိ အချို့သော စာမျက်နှာ များသည် သင် လော့ဂ်အင် ဝင်ထားစဉ်က အတိုင်းပင် ဆက်လက် ပြသနေမည်ဖြစ်သည်။',
+'welcomecreation'          => '== မင်္ဂလာပါ $1! ==
 သင့်အကောင့်ကို ဖန်တီးပြီးပါပြီ။
 [[Special:Preferences|{{SITENAME}} စိတ်​ကြိုက်​ရွေးချယ်စရာတို့]]ကို ပြောင်းရန် မမေ့ပါနှင့်။',
-'yourname'                => 'အသုံးပြုသူအမည် -',
-'yourpassword'            => 'စကားဝှက် -',
-'yourpasswordagain'       => 'စကားဝှက် ပြန်​ရိုက်​ပါ -',
-'remembermypassword'      => 'ဤ​ကွန်​ပျူ​တာ​တွင်​ကျွန်​တော့​ကို​မှတ်​ထား​ပါ​',
-'yourdomainname'          => 'သင့်ဒိုမိန်း -',
-'login'                   => 'Log in ဝင်ရန်',
-'nav-login-createaccount' => 'Log in ဝင်ရန်/ အကောင့် လုပ်ရန်',
-'userlogin'               => 'Log in ဝင်ရန်/ အကောင့် လုပ်ရန်',
-'userloginnocreate'       => 'Log in ဝင်ရန်',
-'logout'                  => 'Log out ထွက်ရန်',
-'userlogout'              => 'Log out ထွက်ရန်',
-'notloggedin'             => 'logged in ဝင်မထားပါ',
-'nologin'                 => 'အကောင့်မရှိဘဲ ဖြစ်နေပါသလား။ $1။',
-'nologinlink'             => 'အကောင့်လုပ်ရန်',
-'createaccount'           => 'အကောင့်လုပ်ရန်',
-'gotaccount'              => 'အကောင့်ရှိပြီးသားလား။ $1။',
-'gotaccountlink'          => 'Log in ဝင်ရန်',
-'createaccountmail'       => 'အီးမေးဖြင့်',
-'badretype'               => 'သင်ထည့်သွင်းလိုက်သော စကားဝှက်များ ကိုက်ညီမှု မရှိပါ။',
-'userexists'              => 'သင်ရွေးသော အသုံးပြုသူအမည်မှာ ရှိပြီးဖြစ်သည်။
+'yourname'                 => 'အသုံးပြုသူအမည် -',
+'yourpassword'             => 'စကားဝှက် -',
+'yourpasswordagain'        => 'စကားဝှက် ပြန်​ရိုက်​ပါ -',
+'remembermypassword'       => 'ဤ​ကွန်​ပျူ​တာ​တွင်​ ကျွနု်ပ်ကို​မှတ်​ထား​ရန် (အများဆုံး $1 {{PLURAL:$1|ရက်|ရက်}}ကြာ)',
+'yourdomainname'           => 'သင့်ဒိုမိန်း -',
+'login'                    => 'Log in ဝင်ရန်',
+'nav-login-createaccount'  => 'Log in ဝင်ရန်/ အကောင့် လုပ်ရန်',
+'loginprompt'              => '{{SITENAME}} သို့ လော့အင်ဝင်ရန် ကွတ်ကီးသုံးနိုင်ရန် ပြုလုပ်ပေးထားရမည်။',
+'userlogin'                => 'Log in ဝင်ရန်/ အကောင့် လုပ်ရန်',
+'userloginnocreate'        => 'Log in ဝင်ရန်',
+'logout'                   => 'Log out ထွက်ရန်',
+'userlogout'               => 'Log out ထွက်ရန်',
+'notloggedin'              => 'logged in ဝင်မထားပါ',
+'nologin'                  => 'အကောင့်မရှိဘဲ ဖြစ်နေပါသလား။ $1။',
+'nologinlink'              => 'အကောင့်လုပ်ရန်',
+'createaccount'            => 'အကောင့်လုပ်ရန်',
+'gotaccount'               => 'အကောင့်ရှိပြီးသားလား။ $1။',
+'gotaccountlink'           => 'Log in ဝင်ရန်',
+'userlogin-resetlink'      => 'Login ဝင်သည့် အသေးစိတ်တို့ကို မေ့သွားပါသလား?',
+'createaccountmail'        => 'အီးမေးဖြင့်',
+'createaccountreason'      => 'အ​ကြောင်း​ပြ​ချက် -',
+'badretype'                => 'သင်ထည့်သွင်းလိုက်သော စကားဝှက်များ ကိုက်ညီမှု မရှိပါ။',
+'userexists'               => 'သင်ရွေးသော အသုံးပြုသူအမည်မှာ ရှိပြီးဖြစ်သည်။
 အခြား အမည် ရွေးပါ။',
-'loginerror'              => 'Login ဝင်ခြင်း အမှား',
-'createaccounterror'      => 'ဤအကောင့်ကို မဖန်တီးနိုင်ပါ - $1',
-'noname'                  => 'တရားဝင် အသုံးပြုသူအမည်ကို မသတ်မှတ်ရသေးပါ။',
-'loginsuccesstitle'       => 'Login ဝင်​ခြင်း အောင်မြင်သည်။',
-'loginsuccess'            => "'''သင်သည် {{SITENAME}} သို့ \"\$1\" အဖြစ် Login ဝင်ပြီးဖြစ်သည်။'''",
-'nosuchusershort'         => '"<nowiki>$1</nowiki>" အမည်ဖြင့် အသုံးပြုသူမရှိပါ။
+'loginerror'               => 'Login ဝင်ခြင်း အမှား',
+'createaccounterror'       => 'ဤအကောင့်ကို မဖန်တီးနိုင်ပါ - $1',
+'noname'                   => 'တရားဝင် အသုံးပြုသူအမည်ကို မသတ်မှတ်ရသေးပါ။',
+'loginsuccesstitle'        => 'Login ဝင်​ခြင်း အောင်မြင်သည်။',
+'loginsuccess'             => "'''သင်သည် {{SITENAME}} သို့ \"\$1\" အဖြစ် Login ဝင်ပြီးဖြစ်သည်။'''",
+'nosuchusershort'          => '"$1" အမည်ဖြင့် အသုံးပြုသူမရှိပါ။
 စာလုံးပေါင်း ပြန်စစ်ပေးပါရန်။',
-'nouserspecified'         => 'အသုံးပြုသူအမည်ကို ဖော်ပြရမည်ဖြစ်သည်။',
-'login-userblocked'       => 'ဤအသုံးပြုသူကို ပိတ်ပင်ထားသည်။ Login ဝင်ခြင်း ခွင့်မပြုပါ။',
-'wrongpassword'           => 'စကားဝှက်အမှားထည့်ထားသည်။
+'nouserspecified'          => 'အသုံးပြုသူအမည်ကို ဖော်ပြရမည်ဖြစ်သည်။',
+'login-userblocked'        => 'ဤအသုံးပြုသူကို ပိတ်ပင်ထားသည်။ Login ဝင်ခြင်း ခွင့်မပြုပါ။',
+'wrongpassword'            => 'စကားဝှက်အမှားထည့်ထားသည်။
 ကျေးဇူးပြု၍ ပြန်ကြိုးစားကြည့်ပါ။',
-'wrongpasswordempty'      => 'စကားဝှက်ထည့်ရမည်နေရာ ဗလာဖြစ်နေသည်။
+'wrongpasswordempty'       => 'စကားဝှက်ထည့်ရမည်နေရာ ဗလာဖြစ်နေသည်။
 ကျေးဇူးပြု၍ ပြန်ကြိုးစားကြည့်ပါ။',
-'passwordtooshort'        => 'စကားဝှက်တွင် စကားလုံး အနည်းဆုံး {{PLURAL:$1|တစ်လုံး|$1 လုံး}} ရှိရမည်။',
-'password-name-match'     => 'သင့်စကားဝှက်သည် အသုံးပြုသူအမည်နှင့် အတူတူမဖြစ်စေရဘဲ ကွဲပြားရမည်။',
-'mailmypassword'          => 'စကားဝှက်အသစ်ကို အီးမေး ပို့ရန်',
-'passwordremindertitle'   => '{{SITENAME}} အတွက် ယာယီစကားဝှက်အသစ်',
-'noemail'                 => 'အသုံးပြုသူ "$1" အတွက် မည်သည့်အီးမေးလိပ်စာမှ မှတ်သားထားခြင်း မရှိပါ။',
-'noemailcreate'           => 'တရာဝင်အီးမေးလိပ်စာ ပေးရန် လိုအပ်သည်',
-'mailerror'               => 'မေးပို့ခြင်း အမှား - $1',
-'emailauthenticated'      => 'သင့်အီးမေးလိပ်စာတည်ရှိကြောင်း $2 နေ့ $3 အချိန်က အတည်ပြုလိုက်သည်။',
-'emailconfirmlink'        => 'အီးမေးကိုအတည်ပြုပါ',
-'accountcreated'          => 'အကောင့်ဖန်တီးပြီးပါပြီ',
-'accountcreatedtext'      => '$1 အတွက် အသုံးပြုသူအကောင့်တစ်ခု ဖန်တီးပြီးဖြစ်သည်။',
-'createaccount-title'     => '{{SITENAME}} အတွက် အကောင့်ပြုလုပ်ခြင်း',
-'usernamehasherror'       => 'အသုံးပြုသူအမည်တွင် hash စာလုံး (#) မပါရပါ',
-'login-throttled'         => 'သင်သည် login ဝင်ရန် အကြိမ်မြောက်မြားစွာ အားထုတ်ခဲ့ပြီးဖြစ်သည်။
+'passwordtooshort'         => 'စကားဝှက်တွင် စကားလုံး အနည်းဆုံး {{PLURAL:$1|တစ်လုံး|$1 လုံး}} ရှိရမည်။',
+'password-name-match'      => 'သင့်စကားဝှက်သည် အသုံးပြုသူအမည်နှင့် အတူတူမဖြစ်စေရဘဲ ကွဲပြားရမည်။',
+'password-login-forbidden' => 'ဤအသုံးပြုသူအမည်နှင့် စကားဝှက်အား အသုံးပြုခြင်းကို တားမြစ်ထားသည်။',
+'mailmypassword'           => 'စကားဝှက်အသစ်ကို အီးမေး ပို့ရန်',
+'passwordremindertitle'    => '{{SITENAME}} အတွက် ယာယီစကားဝှက်အသစ်',
+'noemail'                  => 'အသုံးပြုသူ "$1" အတွက် မည်သည့်အီးမေးလိပ်စာမှ မှတ်သားထားခြင်း မရှိပါ။',
+'noemailcreate'            => 'တရာဝင်အီးမေးလိပ်စာ ပေးရန် လိုအပ်သည်',
+'mailerror'                => 'မေးပို့ခြင်း အမှား - $1',
+'emailauthenticated'       => 'သင့်အီးမေးလိပ်စာတည်ရှိကြောင်း $2 နေ့ $3 အချိန်က အတည်ပြုလိုက်သည်။',
+'emailconfirmlink'         => 'အီးမေးကိုအတည်ပြုပါ',
+'accountcreated'           => 'အကောင့်ဖန်တီးပြီးပါပြီ',
+'accountcreatedtext'       => '$1 အတွက် အသုံးပြုသူအကောင့်တစ်ခု ဖန်တီးပြီးဖြစ်သည်။',
+'createaccount-title'      => '{{SITENAME}} အတွက် အကောင့်ပြုလုပ်ခြင်း',
+'usernamehasherror'        => 'အသုံးပြုသူအမည်တွင် hash စာလုံး (#) မပါရပါ',
+'login-throttled'          => 'သင်သည် login ဝင်ရန် အကြိမ်မြောက်မြားစွာ အားထုတ်ခဲ့ပြီးဖြစ်သည်။
 ကျေးဇူးပြု၍ ထပ်မဝင်ခင် စောင့်ပေးပါ။',
-'loginlanguagelabel'      => 'ဘာသာ: $1',
+'login-abort-generic'      => 'Login ဝင်ခြင်း မအောင်မြင်ပါ - ထွက်သွားပြီ',
+'loginlanguagelabel'       => 'ဘာသာ: $1',
 
-# Password reset dialog
+# Change password dialog
 'resetpass'                 => 'စကားဝှက်ပြောင်းရန်',
 'resetpass_announce'        => 'သင်သည် ယာယီ စကားဝှက်ဖြင့် ဝင်ရောက်ခြင်းဖြစ်သည်။
 စကားဝှက် အသစ်အား ဤနေရာတွင်ရိုက်ပါ :',
@@ -437,6 +454,10 @@ $messages = array(
 'resetpass-submit-cancel'   => 'မလုပ်တော့ပါ',
 'resetpass-temp-password'   => 'ယာယီစကားဝှက် -',
 
+# Special:PasswordReset
+'passwordreset-username' => 'အသုံးပြုသူအမည် :',
+'passwordreset-email'    => 'အီးမေး လိပ်စာ :',
+
 # Edit page toolbar
 'bold_sample'     => 'စာလုံးမည်း',
 'bold_tip'        => 'စာလုံးမည်း',
@@ -448,8 +469,6 @@ $messages = array(
 'extlink_tip'     => 'ပြင်ပလင့်များ (http:// ကို ရှေ့ဆုံးမှ ထည့်ရေးရန် မမေ့ပါနှင့်)',
 'headline_sample' => 'ခေါင်းကြီးစာသား',
 'headline_tip'    => 'အဆင့် ၂ ခေါင်းစီး',
-'math_sample'     => 'ဤနေရာတွင် သင်္ချာပုံသေနည်း သုံးရန်',
-'math_tip'        => 'သင်္ချာပုံသေနည်း (LaTeX)',
 'nowiki_sample'   => 'ဖောမတ်မလုပ်ထားသော စာများကို ဤနေရာတွင် ထည့်ရန်',
 'nowiki_tip'      => 'ဝီကီပုံစံ ဖော်မတ်များကို လျစ်လျူရှုရန်',
 'image_tip'       => 'Embedded ထည့်ထားသော ဖိုင်',
@@ -469,6 +488,7 @@ $messages = array(
 'showdiff'                         => 'ပြင်​ဆင်​ထား​သည်​များ​ကို​ ပြရန်',
 'anoneditwarning'                  => "'''သတိပေးချက် - ''' သင်သည် logged in ဝင်မထားပါ။
 ဤစာမျက်နှာ၏ တည်းဖြတ်မှတ်တမ်းတွင် သင့် IP address ကို မှတ်သားထားမည် ဖြစ်သည်။",
+'anonpreviewwarning'               => 'သင်သည် logged in ဝင်မထားပါ။ သိမ်းဆည်းမည် ဆိုပါက သင်၏IP အား ဤစာမျက်နှာ မှတ်တမ်းတွင် မှတ်သားထားမည်ဖြစ်ပါသည်။',
 'missingcommenttext'               => 'ကျေးဇူးပြု၍ အောက်တွင် မှတ်ချက်တစ်ခုရေးပါ။',
 'summary-preview'                  => 'အ​ကျဉ်း​ချုပ်​န​မူ​နာ:',
 'subject-preview'                  => 'အကြောင်းအရာ/ခေါင်းကြီးပိုင်း နမူနာ -',
@@ -488,6 +508,8 @@ $messages = array(
 မတော်တဆရောက်လာခြင်း ဖြစ်ပါက ဘရောက်ဆာ၏ နောက်ပြန်ပြန်သွားသော'''back''' ခလုတ်ကို နှိပ်ပါ။",
 'noarticletext'                    => 'ဤစာမျက်နှာတွင် ယခုလက်ရှိတွင် မည်သည့်စာသားမှ မရှိပါ။
 သင်သည် အခြားစာမျက်နှာများတွင် [[Special:Search/{{PAGENAME}}|ဤစာမျက်နှာ၏ ခေါင်းစဉ်ကို ရှာနိုင်သည်]]၊ <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} ဆက်စပ်ရာ Logs များကို ရှာနိုင်သည်]၊ သို့မဟုတ် [{{fullurl:{{FULLPAGENAME}}|action=edit}} ဤစာမျက်နှာကို တည်းဖြတ်နိုင်သည်]</span>။',
+'noarticletext-nopermission'       => 'ဤစာမျက်နှာတွင် ယခုလက်ရှိတွင် မည်သည့်စာသားမှ မရှိပါ။
+သင်သည် အခြားစာမျက်နှာများတွင် [[Special:Search/{{PAGENAME}}|ဤစာမျက်နှာ၏ ခေါင်းစဉ်ကို ရှာနိုင်သည်]]၊ သို့မဟုတ် <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} ဆက်စပ်ရာ Logs များကို ရှာနိုင်သည်]</span>။',
 'note'                             => "'''မှတ်ချက် -'''",
 'previewnote'                      => "'''ဤသည်မှာ နမူနာ ကြည့်နေခြင်းသာဖြစ်ကြောင်း မမေ့ပါနှင့်။'''
 သင်ပြောင်းလဲထားသည်များကို မသိမ်းရသေးပါ။",
@@ -516,6 +538,12 @@ $messages = array(
 'permissionserrors'                => 'ခွင့်ပြုချက်အမှားများ',
 'permissionserrorstext'            => 'အောက်ပါ {{PLURAL:$1|အကြောင်းပြချက်|အကြောင်းပြချက်များ}}ကြောင့် ထိုအရာအတွက် ခွင့်ပြုချက်မရှိပါ -',
 'permissionserrorstext-withaction' => 'အောက်ပါ အကြောင်းပြချက် {{PLURAL:$1|ခု|ခု}} ကြောင့် $2 အတွက် ခွင့်ပြုချက်မရှိပါ -',
+'recreate-moveddeleted-warn'       => "'''သတိပေးချက်။ သင်သည် ယခင်က ဖျက်ထားသော စာမျက်နှာတစ်ခုကို ပြန်လည်ဖန်တီးနေသည်။'''
+
+သင့်အနေနှင့် ဤစာမျက်နှာကို ဆက်လက်တည်းဖြတ်ရန် သင့်တော်မည် မသင့်တော်မည်ကို စဉ်းစားသင့်သည်။
+ဖျက်ထားခြင်း နှင့် ရွှေ့ထားခြင်းတို့၏ မှတ်တမ်းကို သင့်အတွက် အလွယ်တကူ ကိုးကားနိုင်ရန် ဖော်ပြထားသည်။",
+'moveddeleted-notice'              => 'ဤစာမျက်နှာကို ဖျက်ထားသည်။
+ဖျက်ထားခြင်း ရွှေ့ဆိုင်းထားခြင်းတို့နှင့် ပတ်သက်သော မှတ်တမ်းကို ကိုးကားနိုင်ရန် အောက်တွင် ဖော်ပြထားသည်။',
 'log-fulllog'                      => 'မှတ်တမ်းအပြည့်အစုံကြည့်ရန်',
 'edit-gone-missing'                => 'စာမျက်နှာကို အပ်ဒိတ်မလုပ်နိုင်ပါ။
 အဖျက်ခံလိုက်ရပုံပေါ်သည်။',
@@ -524,12 +552,22 @@ $messages = array(
 'edit-already-exists'              => 'စာမျက်နှာအသစ်တစ်ခု မဖန်တီးနိုင်ပါ။
 ယင်းစာမျက်နှာ တည်ရှိပြီး ဖြစ်သည်။',
 
+# Parser/template warnings
+'post-expand-template-inclusion-warning'  => "'''သတိပေးချက် -''' တမ်းပလိတ်အရွယ်အစား ကြီးလွန်းနေသည်။
+အချို့တမ်းပလိတ်တို့ ပါဝင်မည်မဟုတ်။",
+'post-expand-template-inclusion-category' => 'ထည့်သွင်းနိုင်သော တမ်းပလိတ်အရွယ်အစားပြည့်သွားပြီဖြစ်သော စာမျက်နှာများ',
+'post-expand-template-argument-warning'   => "'''သတိပေးချက် -''' ဤစာမျက်နှာတွင် ပမာဏအားဖြင့် ကြီးမားကျယ်ပြန့်သော template argument တစ်ခုပါဝင်သည်။
+ယင်း arguments များကို ဖယ်ထုတ်လိုက်သည်။",
+'post-expand-template-argument-category'  => 'ဖယ်ထုတ်ထားသော template arguments များပါဝင်သည့် စာမျက်နှာများ',
+'parser-template-loop-warning'            => 'တမ်းပလိတ်များ လှည့်ပတ်ဆက်စပ် နေသည်ကို တွေ့ရသည်။ [[$1]]',
+
 # History pages
 'viewpagelogs'           => 'ဤစာမျက်နှာအတွက် မှတ်တမ်းများကို ကြည့်ရန်',
 'nohistory'              => 'ဤစာမျက်နှာတွင် တည်းဖြတ်မှု ရာဇဝင်မရှိပါ',
 'currentrev'             => 'နောက်ဆုံးမူ',
 'currentrev-asof'        => '$1 က နောက်ဆုံး တည်းဖြတ်မူ',
 'revisionasof'           => '$1 ရက်နေ့က မူ',
+'revision-info'          => '$1 နေ့က $2 တည်းဖြတ်သည့်မူ',
 'previousrevision'       => 'မူဟောင်း',
 'nextrevision'           => 'ပိုသစ်သော တည်းဖြတ်မူ →',
 'currentrevisionlink'    => 'နောက်ဆုံး မူ',
@@ -538,7 +576,7 @@ $messages = array(
 'last'                   => 'ယခုမတိုင်မီ',
 'page_first'             => 'ပထမဆုံး',
 'page_last'              => 'အနောက်ဆုံး',
-'histlegend'             => "တည်းဖြတ်မူများကို နှိုင်းယဉ်ရန် radio boxes လေးများကို မှတ်သားပြီးနောက် Enter ရိုက်ချပါ သို့ အောက်ခြေမှ ခလုတ်ကို နှိပ်ပါ။<br />
+'histlegend'             => "တည်းဖြတ်မူများကို နှိုင်းယှဉ်ရန် radio boxes လေးများကို မှတ်သားပြီးနောက် Enter ရိုက်ချပါ သို့ အောက်ခြေမှ ခလုတ်ကို နှိပ်ပါ။<br />
 Legend: '''({{int:cur}})''' = နောက်ဆုံးမူနှင့် ကွဲပြားချက် '''({{int:last}})''' = ယင်းရှေ့မူနှင့် ကွဲပြားချက်, '''{{int:minoreditletter}}''' = အရေးမကြီးသော ပြုပြင်မှု.",
 'history-fieldset-title' => 'ရာဇဝင်ရှာကြည့်ရန်',
 'history-show-deleted'   => 'ဖျက်ထားသည်များသာ',
@@ -576,6 +614,8 @@ Legend: '''({{int:cur}})''' = နောက်ဆုံးမူနှင့် �
 'logdelete-logentry'         => '"[[$1]]" ၏ အဖြစ်အပျက် မြင်နိုင်စွမ်းကို ပြောင်းလဲရန်',
 'revdelete-success'          => "'''မူမြင်နိုင်စွမ်းရှိမှုကို အောင်မြင်စွာ update လုပ်ပြီးပါပြီ။'''",
 'revdel-restore'             => 'မည်မျှ ရှုမြင်နိုင်သည်ကို ပြောင်းရန်',
+'revdel-restore-deleted'     => 'ဖျက်ပစ်လိုက်သောမူများ',
+'revdel-restore-visible'     => 'မြင်နိုင်သော မူများ',
 'pagehist'                   => 'စာမျက်နှာ မှတ်တမ်း',
 'deletedhist'                => 'ဖျက်ပစ်လိုက်သော မှတ်တမ်း',
 'revdelete-content'          => 'မာတိကာ',
@@ -585,6 +625,7 @@ Legend: '''({{int:cur}})''' = နောက်ဆုံးမူနှင့် �
 'revdelete-unrestricted'     => 'အက်ဒမင်များအတွက် ကန့်သတ်ချက်များကို ဖယ်ရှားရန်',
 'revdelete-hid'              => '$1 ကို ဝှက်ထားသည်',
 'revdelete-unhid'            => '$1 ကို မဝှက်တော့ပါ',
+'revdelete-log-message'      => '$1 အတွက် တည်းဖြတ်မူ $2 {{PLURAL:$2|ခု|ခု}}',
 'revdelete-otherreason'      => 'အခြားသော/နောက်ထပ် အကြောင်းပြချက် -',
 'revdelete-reasonotherlist'  => 'အခြား အကြောင်းပြချက်',
 'revdelete-edit-reasonlist'  => 'ဖျက်ပစ်လိုက်ရသော အကြောင်းရင်းများကို တည်းဖြတ်ရန်',
@@ -616,10 +657,12 @@ Legend: '''({{int:cur}})''' = နောက်ဆုံးမူနှင့် �
 # Diffs
 'history-title'            => '"$1" ၏ တည်းဖြတ်မူ ရာဇဝင်များ',
 'difference'               => 'တည်းဖြတ်မူများ အကြား ကွဲပြားမှုများ',
+'difference-multipage'     => '(စာမျက်နှာများကြားမှ ကွဲပြားချက်များ)',
 'lineno'                   => 'စာကြောင်း $1 -',
 'compareselectedversions'  => 'ရွေးချယ်ထားသော မူများကို နှိုင်းယှဉ်ရန်',
 'showhideselectedversions' => 'ရွေးချယ်ထားသော မူများကို ပြရန်/ဝှက်ရန်',
 'editundo'                 => 'နောက်ပြန် ပြန်ပြင်ရန်',
+'diff-multi'               => '({{PLURAL:$2|အသုံးပြုသူတစ်ဦး|အသုံးပြုသူ $2 ဦး}}၏{{PLURAL:$1|အလယ်အလတ်တည်းဖြတ်မူတစ်ခု|အလယ်အလတ်တည်းဖြတ်မူ $1 ခု}}ကို မပြပါ)',
 
 # Search results
 'searchresults'                    => 'ရှာဖွေမှု ရလဒ်များ',
@@ -653,6 +696,7 @@ Legend: '''({{int:cur}})''' = နောက်ဆုံးမူနှင့် �
 'searchprofile-everything-tooltip' => '(ဆွေးနွေးချက်စာမျက်နှာများအပါအဝင်) ရှိသမျှအားလုံးတွင် ရှာရန်',
 'searchprofile-advanced-tooltip'   => 'စိတ်ကြိုက်အမည်ညွှန်းများတွင် ရှာရန်',
 'search-result-size'               => '$1 ({{PLURAL:$2|စကားလုံး 1 လုံး|စကားလုံး $2 လုံး}})',
+'search-result-category-size'      => '{{PLURAL:$1|အသင်းဝင်တစ်ခု|အသင်းဝင် $1 ခု}} ({{PLURAL:$2|ကဏ္ဍခွဲတစ်ခု|ကဏ္ဍခွဲ $2 ခု}}, {{PLURAL:$3|ဖိုင်တစ်ခု|ဖိုင် $3 ခု}})',
 'search-result-score'              => 'ကိုက်ညီမှုရာနှုန်း - $1%',
 'search-redirect'                  => '($1 သို့ ပြန်ညွှန်းသည်)',
 'search-section'                   => '(အပိုင်း $1)',
@@ -669,6 +713,7 @@ Legend: '''({{int:cur}})''' = နောက်ဆုံးမူနှင့် �
 'searchall'                        => 'အားလုံး',
 'showingresults'                   => "'''$2''' နှင့်စသော ရလဒ် {{PLURAL:$1|'''1''' ခု|'''$1''' ခု}}ထိကို အောက်တွင် ပြထားသည်။",
 'showingresultsnum'                => "'''$2''' နှင့်စသော ရလဒ် {{PLURAL:$3|'''1''' ခု|'''$3''' ခု}} ကို အောက်တွင် ပြထားသည်။",
+'showingresultsheader'             => "'''$4''' အတွက် {{PLURAL:$5|ရလဒ် '''$3''' ခု အနက်မှ '''$1'''|ရလဒ် '''$3'''ခု အနက်မှ '''$1 - $2'''}}",
 'nonefound'                        => "'''Note''': Only some namespaces are searched by default.
 ပုံမှန်အားဖြင့် အမည်ညွှန်းအချို့ကိုသာ ရှာပေးမည်ဖြစ်သည်။
 Try prefixing your query with ''all:'' to search all content (including talk pages, templates, etc), or use the desired namespace as prefix.
@@ -699,7 +744,6 @@ Try prefixing your query with ''all:'' to search all content (including talk pag
 'changepassword'                => 'စကားဝှက် ပြောင်းရန်',
 'prefs-skin'                    => 'အသွင်အပြင်',
 'skin-preview'                  => 'နမူနာ',
-'prefs-math'                    => 'သင်္ချာ',
 'datedefault'                   => 'မရွေးချယ်',
 'prefs-datetime'                => 'နေ့စွဲနှင့် အချိန်',
 'prefs-personal'                => 'အသုံးပြုသူ ပရိုဖိုင်',
@@ -723,7 +767,7 @@ Try prefixing your query with ''all:'' to search all content (including talk pag
 'columns'                       => 'ဒေါင်လိုက်တန်း -',
 'searchresultshead'             => 'ရှာ​ဖွေ​ရန်​',
 'resultsperpage'                => 'စာတစ်မျက်နှာလျှင် ဝင်ကြည့်နှုန်း -',
-'contextlines'                  => 'စာတစ်ကြောင်းလျှင် ဝင်ကြည့်နှုန်း -',
+'stub-threshold-disabled'       => 'ပိတ်ထားသည်',
 'recentchangesdays'             => 'လတ်တလောအပြောင်းအလဲများကို ပြရန်နေ့များ -',
 'recentchangesdays-max'         => 'အများဆုံး $1 {{PLURAL:$1|ရက်|ရက်}}',
 'recentchangescount'            => 'ပုံသေအားဖြင့် ပြရန် တည်းဖြတ်မှုအရေအတွက် -',
@@ -772,6 +816,11 @@ HTML tags ကို စစ်ဆေးပါ။',
 'gender-male'                   => 'ကျား',
 'gender-female'                 => 'မ',
 'email'                         => 'အီးမေး',
+'prefs-help-email'              => 'အီးမေးလ်လိပ်စာ ပေးမည် မပေးမည်မှာ သင့်သဘောသာ ဖြစ်ပါသည်။ သို့သော်လည်း သင် စကားဝှက်ကို မေ့သွားပါက စကားဝှက်ကို reset လုပ်ရန် အီးမေးလ်လိပ်စာ လိုအပ်ပါလိမ့်မည်။',
+'prefs-help-email-others'       => 'You can also choose to let others contact you by e-mail through a link on your user or talk page.
+သင့်ယူဆာစာမျက်နှာ သို့မဟုတ် ဆွေးနွေးရန်စာမျက်နှာရှိ လင့်မှတဆင့် သင့်ထံ အခြားသူများ အီးမေးမှဆက်သွယ်ရန်လည်း ရွေးချယ်နိုင်သည်။
+Your e-mail address is not revealed when other users contact you.
+အခြားသူများ သင့်ထံဆက်သွယ်သည့်အခါ သင့်အီးမေးကို သူတို့ကို ဖော်ပြမည်မဟုတ်ပါ။',
 'prefs-help-email-required'     => 'အီးမေးလိပ်စာ လိုအပ်ပါသည်။',
 'prefs-info'                    => 'အခြေခံသတင်းအချက်အလက်',
 'prefs-i18n'                    => 'နိုင်ငံတကာအဆင့်မီပြုလုပ်ခြင်း',
@@ -783,7 +832,14 @@ HTML tags ကို စစ်ဆေးပါ။',
 'prefs-advancedrendering'       => 'အဆင့်မြင့် ရွေးချယ်မှု',
 'prefs-advancedsearchoptions'   => 'အဆင့်မြင့် ရွေးချယ်မှု',
 'prefs-advancedwatchlist'       => 'အဆင့်မြင့် ရွေးချယ်မှု',
+'prefs-displayrc'               => 'ပြသရန် ရွေးချယ်မှု',
+'prefs-displaysearchoptions'    => 'ပြသရန် ရွေးချယ်မှု',
+'prefs-displaywatchlist'        => 'ပြသရန် ရွေးချယ်မှု',
 'prefs-diffs'                   => 'ကွဲပြားချက်',
+
+# User preference: e-mail validation using jQuery
+'email-address-validity-valid'   => 'အီးမေးလိပ်စာ တရားဝင်ပုံပေါ်သည်',
+'email-address-validity-invalid' => 'တရားဝင်အီးမေးလိပ်စာတစ်ခု ထည့်ပါ',
 
 # User rights
 'userrights'                  => 'အသုံးပြုသူ၏ အခွင့်အရေးများကို စီမံခန့်ခွဲခြင်း',
@@ -844,6 +900,7 @@ HTML tags ကို စစ်ဆေးပါ။',
 'right-block'                => 'အခြားအသုံးပြုသူများ တည်းဖြတ်ခြင်းမှ ပိတ်ပင်ရန်',
 'right-blockemail'           => 'အီးမေးပို့ခြင်းမှ အသုံးပြုသူကို တားဆီးရန်',
 'right-hideuser'             => 'အသုံးပြုသူအမည်ကို ပိတ်ပင်ရန်နှင့် ယင်းအမည်ကို အများမမြင်နိုင်အောင် ဝှက်ထားရန်',
+'right-unblockself'          => 'ပိတ်ပင်ထားသည်ကို သူတို့ဘာသာ ပြန်ဖွင့်ရန်',
 'right-protect'              => 'ကာကွယ်မှုအဆင့် လျှော့ချရန်နှင့် ကာကွယ်ထားသည့်စာမျက်နှာများကို တည်းဖြတ်ရန်',
 'right-editusercss'          => 'အခြားအသုံးပြုသူများ၏ CSS ဖိုင်ကို တည်းဖြတ်ရန်',
 'right-edituserjs'           => 'အခြားအသုံးပြုသူများ၏ JavaScript ဖိုင်ကို တည်းဖြတ်ရန်',
@@ -854,7 +911,6 @@ HTML tags ကို စစ်ဆေးပါ။',
 'right-mergehistory'         => 'စာမျက်နှာများ၏ရာဇဝင်များကို ပေါင်းရန်',
 'right-userrights'           => 'အသုံးပြုသူ၏အခွင့်အရေးများအားလုံးကို တည်းဖြတ်ရန်',
 'right-userrights-interwiki' => 'အခြားဝီကီများမှ အသုံးပြုသူများ၏ အသုံးပြုသူအခွင့်အရေးများကို တည်းဖြတ်ရန်',
-'right-reset-passwords'      => 'အခြားအသုံးပြုသူများ၏ စကားဝှက်များကို ပြန်သတ်မှတ်ရန်',
 'right-sendemail'            => 'အခြားအသုံးပြုသူများကို အီးမေးပို့ရန်',
 
 # User rights log
@@ -926,57 +982,73 @@ HTML tags ကို စစ်ဆေးပါ။',
 'rc-enhanced-hide'                  => 'အသေးစိတ် မပြရန်',
 
 # Recent changes linked
-'recentchangeslinked'         => 'ဆက်​စပ်သော​ အ​ပြောင်း​အ​လဲ​များ​',
-'recentchangeslinked-feed'    => 'ဆက်စပ်သော ​အ​ပြောင်း​အ​လဲ​များ​',
-'recentchangeslinked-toolbox' => 'ဆက်​စပ်​သော​အ​ပြောင်း​အ​လဲ​များ​',
-'recentchangeslinked-title'   => '"$1" နှင့် ဆက်စပ်သော အပြောင်းအလဲများ',
-'recentchangeslinked-summary' => 'ဤသည်မှာ သီးသန့်ပြထားသော စာမျက်နှာ (သို့ သီးသန့်ကဏ္ဍများ) မှ ညွှန်းထားသော စာမျက်နှာများ၏ လတ်တလော ပြောင်းလဲမှုများ၏ စာရင်းဖြစ်သည်။ [[Special:Watchlist|စောင့်ကြည့်စာရင်း]] မှ စာမျက်နှာများကို စာလုံးမည်းဖြင့် ပြထားသည်။',
-'recentchangeslinked-page'    => 'စာမျက်နှာ အမည် -',
-'recentchangeslinked-to'      => 'ပေးထားသော စာမျက်နှာများအစား လင့်များနှင့် ဆက်စပ်နေသာ စာမျက်နှာများ၏ အပြောင်းအလဲများကို ပြရန်',
+'recentchangeslinked'          => 'ဆက်​စပ်သော​ အ​ပြောင်း​အ​လဲ​များ​',
+'recentchangeslinked-feed'     => 'ဆက်စပ်သော ​အ​ပြောင်း​အ​လဲ​များ​',
+'recentchangeslinked-toolbox'  => 'ဆက်​စပ်​သော​အ​ပြောင်း​အ​လဲ​များ​',
+'recentchangeslinked-title'    => '"$1" နှင့် ဆက်စပ်သော အပြောင်းအလဲများ',
+'recentchangeslinked-noresult' => 'ပေးထားသော အချိန်အတွင်း လင့်ချိတ်ထားသော စာမျက်နှာများတွင် အပြောင်းအလဲမရှိပါ။',
+'recentchangeslinked-summary'  => 'ဤသည်မှာ သီးသန့်ပြထားသော စာမျက်နှာ (သို့ သီးသန့်ကဏ္ဍများ) မှ ညွှန်းထားသော စာမျက်နှာများ၏ လတ်တလော ပြောင်းလဲမှုများ၏ စာရင်းဖြစ်သည်။ [[Special:Watchlist|စောင့်ကြည့်စာရင်း]] မှ စာမျက်နှာများကို စာလုံးမည်းဖြင့် ပြထားသည်။',
+'recentchangeslinked-page'     => 'စာမျက်နှာ အမည် -',
+'recentchangeslinked-to'       => 'ပေးထားသော စာမျက်နှာများအစား လင့်များနှင့် ဆက်စပ်နေသာ စာမျက်နှာများ၏ အပြောင်းအလဲများကို ပြရန်',
 
 # Upload
-'upload'              => 'ဖိုင်​တင်​ရန်​',
-'uploadbtn'           => 'ဖိုင်​တင်​ရန်​',
-'reuploaddesc'        => 'Upload တင်နေခြင်းကို ဖျက်သိမ်းပြီး upload တင်သည့် ပုံစံသို့ ပြန်သွားရန်',
-'upload-tryagain'     => 'ပြုပြင်ထားသောဖိုင်၏ ဖော်ပြချက်ကို ထည့်သွင်းရန်',
-'uploadnologin'       => 'logged in ဝင်မထားပါ',
-'uploadnologintext'   => 'ဖိုင်များကို Upload တင်ရန် [[Special:UserLogin|logged in ဝင်ပြီး]] ဖြစ်ရမည်။',
-'uploaderror'         => 'အပ်လုပ်တင်ခြင်း အမှား',
-'upload-permitted'    => 'ခွင့်ပြုထားသော ဖိုင်အမျိုးအစား - $1။',
-'upload-preferred'    => 'အလေးပေးသော ဖိုင်အမျိုးအစား - $1။',
-'upload-prohibited'   => 'တားမြစ်ထားသော ဖိုင်အမျိုးအစား - $1။',
-'uploadlog'           => 'Upload တင်သည့် မှတ်တမ်း',
-'uploadlogpage'       => 'Upload တင်သည့် မှတ်တမ်း',
-'filename'            => 'ဖိုင်အမည်',
-'filedesc'            => 'အ​ကျဉ်း​ချုပ်​',
-'fileuploadsummary'   => 'အ​ကျဉ်း​ချုပ်​ -',
-'filereuploadsummary' => 'ဖိုင်အပြောင်းအလဲများ -',
-'filestatus'          => 'မူပိုင်ခွင့် အခြေအနေ -',
-'filesource'          => 'ရင်းမြစ် -',
-'uploadedfiles'       => 'တင်ထားသောဖိုင်များ',
-'ignorewarning'       => 'သတိပေးချက်ကို လျစ်လျူရှု၍ ဖိုင်ကို သိမ်းသာသိမ်းပါ',
-'ignorewarnings'      => 'မည်သည့်သတိပေးချက်ကိုမဆို လျစ်လျူရှုရန်',
-'minlength1'          => 'ဖိုင်အမည်သည် အနည်းဆုံး အက္ခရာတစ်လုံး ရှိရမည်။',
-'badfilename'         => 'ဖိုင်အမည်ကို "$1" ဟု ပြောင်းလဲပြီးဖြစ်သည်။',
-'filetype-badmime'    => 'MIME အမျိုးအစား "$1" ဖိုင်များကို တင်ရန် ခွင့်မပြုပါ။',
-'filetype-missing'    => 'ဖိုင်တွင် အိတ်စတန်းရှင်း မရှိပါ (".jpg" စသည်)။',
-'largefileserver'     => 'ဤဖိုင်သည် ဆာဗာတွင် ခွင့်ပြုရန်သတ်မှတ်ထားသော ဖိုင်အရွယ်အစားထက် ကြီးနေသည်။',
-'uploadwarning'       => 'Upload တင်ရာတွင် သတ်ပေးချက်',
-'savefile'            => 'ဖိုင်သိမ်းရန်',
-'uploadedimage'       => '"[[$1]]" ပုံကို တင်ပြီးပြီဖြစ်သည်',
-'overwroteimage'      => '"[[$1]]" ၏ မူသစ်ကို upload တင်လိုက်ပြီ',
-'uploaddisabled'      => 'Upload တင်ခြင်း ပိတ်ထားသည်။',
-'uploaddisabledtext'  => 'ဖိုင်တင်ခြင်းများကို ပိတ်ထားသည်။',
-'uploadvirus'         => 'ဖိုင်တွင် ဗိုင်းရပ်စ် ပါနေပါသည်။
+'upload'               => 'ဖိုင်​တင်​ရန်​',
+'uploadbtn'            => 'ဖိုင်​တင်​ရန်​',
+'reuploaddesc'         => 'Upload တင်နေခြင်းကို ဖျက်သိမ်းပြီး upload တင်သည့် ပုံစံသို့ ပြန်သွားရန်',
+'upload-tryagain'      => 'ပြုပြင်ထားသောဖိုင်၏ ဖော်ပြချက်ကို ထည့်သွင်းရန်',
+'uploadnologin'        => 'logged in ဝင်မထားပါ',
+'uploadnologintext'    => 'ဖိုင်များကို Upload တင်ရန် [[Special:UserLogin|logged in ဝင်ပြီး]] ဖြစ်ရမည်။',
+'uploaderror'          => 'အပ်လုပ်တင်ခြင်း အမှား',
+'upload-permitted'     => 'ခွင့်ပြုထားသော ဖိုင်အမျိုးအစား - $1။',
+'upload-preferred'     => 'အလေးပေးသော ဖိုင်အမျိုးအစား - $1။',
+'upload-prohibited'    => 'တားမြစ်ထားသော ဖိုင်အမျိုးအစား - $1။',
+'uploadlog'            => 'Upload တင်သည့် မှတ်တမ်း',
+'uploadlogpage'        => 'Upload တင်သည့် မှတ်တမ်း',
+'filename'             => 'ဖိုင်အမည်',
+'filedesc'             => 'အ​ကျဉ်း​ချုပ်​',
+'fileuploadsummary'    => 'အ​ကျဉ်း​ချုပ်​ -',
+'filereuploadsummary'  => 'ဖိုင်အပြောင်းအလဲများ -',
+'filestatus'           => 'မူပိုင်ခွင့် အခြေအနေ -',
+'filesource'           => 'ရင်းမြစ် -',
+'uploadedfiles'        => 'တင်ထားသောဖိုင်များ',
+'ignorewarning'        => 'သတိပေးချက်ကို လျစ်လျူရှု၍ ဖိုင်ကို သိမ်းသာသိမ်းပါ',
+'ignorewarnings'       => 'မည်သည့်သတိပေးချက်ကိုမဆို လျစ်လျူရှုရန်',
+'minlength1'           => 'ဖိုင်အမည်သည် အနည်းဆုံး အက္ခရာတစ်လုံး ရှိရမည်။',
+'badfilename'          => 'ဖိုင်အမည်ကို "$1" ဟု ပြောင်းလဲပြီးဖြစ်သည်။',
+'filetype-badmime'     => 'MIME အမျိုးအစား "$1" ဖိုင်များကို တင်ရန် ခွင့်မပြုပါ။',
+'filetype-missing'     => 'ဖိုင်တွင် အိတ်စတန်းရှင်း မရှိပါ (".jpg" စသည်)။',
+'empty-file'           => 'သင်တင်သွင်းလိုက်သောဖိုင်သည် ဗလာဖြစ်နေသည်။',
+'file-too-large'       => 'သင်တင်သွင်းလိုက်သောဖိုင်သည် ကြီးလွန်းနေသည်။',
+'filename-tooshort'    => 'ဖိုင်အမည်သည် တိုလွန်းသည်။',
+'filetype-banned'      => 'ဤဖိုင်အမျိုးအစားကို တားမြစ်ထားသည်။',
+'verification-error'   => 'ဤဖိုင်သည် ဖိုင်အတည်ပြုရန်စစ်ဆေးချက် မအောင်မြင်ပါ။',
+'illegal-filename'     => 'ဖိုင်အမည်ကို ခွင့်မပြုပါ။',
+'overwrite'            => 'ရှိပြီးသားဖိုင်အား ထပ်ရေးခြင်းကို ခွင့်မပြုပါ။',
+'unknown-error'        => 'အကြောင်းရင်းမသိရှိရသော အမှားတစ်ခု ဖြစ်ပေါ်နေသည်။',
+'tmp-create-error'     => 'ယာယီဖိုင် မဖန်တီးနိုင်ပါ။',
+'tmp-write-error'      => 'ယာယီဖိုင်ရေးသားရာတွင် အမှားဖြစ်ပေါ်နေသည်။',
+'largefileserver'      => 'ဤဖိုင်သည် ဆာဗာတွင် ခွင့်ပြုရန်သတ်မှတ်ထားသော ဖိုင်အရွယ်အစားထက် ကြီးနေသည်။',
+'uploadwarning'        => 'Upload တင်ရာတွင် သတ်ပေးချက်',
+'savefile'             => 'ဖိုင်သိမ်းရန်',
+'uploadedimage'        => '"[[$1]]" ပုံကို တင်ပြီးပြီဖြစ်သည်',
+'overwroteimage'       => '"[[$1]]" ၏ မူသစ်ကို upload တင်လိုက်ပြီ',
+'uploaddisabled'       => 'Upload တင်ခြင်း ပိတ်ထားသည်။',
+'copyuploaddisabled'   => 'URL လင့်မှ Upload တင်ခြင်း ပိတ်ထားသည်။',
+'uploadfromurl-queued' => 'သင့် upload တင်ရန်ကို စီထားပြီးဖြစ်သည်။',
+'uploaddisabledtext'   => 'ဖိုင်တင်ခြင်းများကို ပိတ်ထားသည်။',
+'uploadvirus'          => 'ဖိုင်တွင် ဗိုင်းရပ်စ် ပါနေပါသည်။
 အသေးစိတ် - $1',
-'upload-source'       => 'ရင်းမြစ်ဖိုင်',
-'sourcefilename'      => 'ရင်းမြစ်ဖိုင်အမည် -',
-'sourceurl'           => 'ရင်းမြစ် URL လင့် -',
-'destfilename'        => 'အလိုရှိရာဖိုင်အမည် -',
-'upload-maxfilesize'  => 'အကြီးဆုံးဖိုင်အရွယ်အစား - $1',
-'upload-description'  => 'ဖိုင်ဖော်ပြချက်',
-'upload-options'      => 'Upload တင်သည့် ရွေးချယ်မှုများ',
-'watchthisupload'     => 'ဤဖိုင်အား စောင့်ကြည့်ရန်',
+'upload-source'        => 'ရင်းမြစ်ဖိုင်',
+'sourcefilename'       => 'ရင်းမြစ်ဖိုင်အမည် -',
+'sourceurl'            => 'ရင်းမြစ် URL လင့် -',
+'destfilename'         => 'အလိုရှိရာဖိုင်အမည် -',
+'upload-maxfilesize'   => 'အကြီးဆုံးဖိုင်အရွယ်အစား - $1',
+'upload-description'   => 'ဖိုင်ဖော်ပြချက်',
+'upload-options'       => 'Upload တင်သည့် ရွေးချယ်မှုများ',
+'watchthisupload'      => 'ဤဖိုင်အား စောင့်ကြည့်ရန်',
+'upload-success-subj'  => 'အောင်မြင်စွာ ့စူသေိ တင်လိုက်သည်',
+'upload-failure-subj'  => 'Upload တင်ရာတွင် တွေ့သည့် ပြဿနာ',
+'upload-warning-subj'  => 'Upload တင်ရာတွင် သတ်ပေးချက်',
 
 'upload-misc-error'   => 'upload တင်ရာတွင် အမည်မသိ အမှား',
 'upload-unknown-size' => 'မသိရှိရသော အရွယ်အစား',
@@ -1004,6 +1076,7 @@ HTML tags ကို စစ်ဆေးပါ။',
 'listfiles_search_for'  => 'မီဒီယာအမည်ကို ရှာရန် -',
 'imgfile'               => 'ဖိုင်',
 'listfiles'             => 'ဖိုင်စာရင်း',
+'listfiles_thumb'       => 'နမူနာပုံငယ်',
 'listfiles_date'        => 'နေ့စွဲ',
 'listfiles_name'        => 'အမည်',
 'listfiles_user'        => 'အသုံးပြုသူ',
@@ -1033,6 +1106,8 @@ HTML tags ကို စစ်ဆေးပါ။',
 'nolinkstoimage'            => 'ဤဖိုင်သို့လင့်ထားသော စာမျက်နှာမရှိပါ။',
 'morelinkstoimage'          => 'ဤဖိုင်သို့[[Special:WhatLinksHere/$1|နောက်ထပ်လင့်များ]] ကိုကြည့်ပါ။',
 'sharedupload'              => 'ဤဖိုင်သည် $1 မှဖြစ်ပြီး အခြားပရောဂျက်များတွင် သုံးကောင်းသုံးလိမ့်မည်။',
+'sharedupload-desc-here'    => 'ဤဖိုင်သည် $1 မှဖြစ်ပြီး အခြားပရောဂျက်များတွင် သုံးကောင်းသုံးလိမ့်မည်။
+ယင်း၏ [$2 ဖိုင်အကြောင်းစာမျက်နှာ] တွင် ဖော်ပြထားချက်ကို အောက်တွင် ပြထားသည်။',
 'filepage-nofile'           => 'ဤအမည်ဖြင့် မည်သည့်ဖိုင်မှ မရှိပါ။',
 'filepage-nofile-link'      => 'ဤအမည်ဖြင့် မည်သည့်ဖိုင်မှ မရှိပါ။ သိုရာတွင် ယင်းကို [$1 upload တင်]နိုင်သည်။',
 'uploadnewversion-linktext' => 'ဤဖိုင်၏ နောက်ဆုံး version ကို upload တင်ရန်',
@@ -1096,6 +1171,8 @@ HTML tags ကို စစ်ဆေးပါ။',
 'statistics-users'         => 'မှတ်ပုံတင်ထားသော [[Special:ListUsers|အသုံးပြုသူများ]]',
 'statistics-users-active'  => 'လက်ရှိလုပ်ကိုင်နေသော အသုံးပြုသူများ',
 'statistics-mostpopular'   => 'အများဆုံးကြည့်သော စာမျက်နှာများ',
+
+'disambiguationspage' => 'Template:သံတူကြောင်းကွဲများ',
 
 'doubleredirects'            => 'နှစ်ဆင့်ပြန် ပြန်ညွှန်းများ',
 'double-redirect-fixed-move' => '[[$1]] ကို ရွှေ့ပြောင်းပြီးဖြစ်သည်။ ယခုအခါ [[$2]] သို့ ပြန်ညွှန်းထားသည်။',
@@ -1222,33 +1299,34 @@ HTML tags ကို စစ်ဆေးပါ။',
 'listgrouprights-removegroup-self-all' => 'မိမိ၏အကောင့်မှ အုပ်စုအားလုံးကို ဖယ်ရှားရန်',
 
 # E-mail user
-'mailnologin'      => 'ပို့ရန်လိပ်စာ မရှိပါ',
-'emailuser'        => 'ဤ​အ​သုံး​ပြု​သူ​အား​အီး​မေး​ပို့​ပါ​',
-'emailpage'        => 'အီးမေးအသုံးပြုသူ',
-'defemailsubject'  => '{{SITENAME}} အီးမေး',
-'noemailtitle'     => 'အီးမေးလိပ်စာ မရှိပါ',
-'noemailtext'      => 'ဤအသုံးပြုသူသည် တရားဝင်သော အီးမေးလိပ်စာကို ဖောိပြထားခြင်း မရှိပါ။',
-'nowikiemailtitle' => 'မည်သည့်အီးမေးမှ ခွင့်မပြုပါ',
-'nowikiemailtext'  => 'ဤအသုံးပြုသူသည် အခြားအသုံးပြုသူများထံမှ အီးမေးကို လက်မခံရန် ရွေးချယ်ထားသည်။',
-'email-legend'     => 'အခြား {{SITENAME}} မှ အသုံးပြုသူကို အီးမေးပို့ရန်',
-'emailfrom'        => 'မှ -',
-'emailto'          => 'သို့ -',
-'emailsubject'     => 'အကြောင်းအရာ -',
-'emailmessage'     => 'စာသား -',
-'emailsend'        => 'ပို့',
-'emailccme'        => 'ကျွန်ုပ်ပို့လိုက်သော အီးမေးကော်ပီကို ကျွန်ုပ်ထံ ပြန်ပို့ပါ။',
-'emailsent'        => 'အီးမေးပို့လိုက်ပြီ',
-'emailsenttext'    => 'သင့်အီးမေးမက်ဆေ့ကို ပို့လိုက်ပြီးပြီ ဖြစ်သည်။',
+'mailnologin'         => 'ပို့ရန်လိပ်စာ မရှိပါ',
+'emailuser'           => 'ဤ​အ​သုံး​ပြု​သူ​အား​အီး​မေး​ပို့​ပါ​',
+'emailpage'           => 'အီးမေးအသုံးပြုသူ',
+'defemailsubject'     => '{{SITENAME}} အီးမေး',
+'usermaildisabled'    => 'အသုံးပြုသူအီးမေးကို ပိတ်ထားသည်',
+'noemailtitle'        => 'အီးမေးလိပ်စာ မရှိပါ',
+'noemailtext'         => 'ဤအသုံးပြုသူသည် တရားဝင်သော အီးမေးလိပ်စာကို ဖောိပြထားခြင်း မရှိပါ။',
+'nowikiemailtitle'    => 'မည်သည့်အီးမေးမှ ခွင့်မပြုပါ',
+'nowikiemailtext'     => 'ဤအသုံးပြုသူသည် အခြားအသုံးပြုသူများထံမှ အီးမေးကို လက်မခံရန် ရွေးချယ်ထားသည်။',
+'emailusername'       => 'အသုံးပြုသူအမည် -',
+'emailusernamesubmit' => 'ထည့်သွင်းရန်',
+'email-legend'        => 'အခြား {{SITENAME}} မှ အသုံးပြုသူကို အီးမေးပို့ရန်',
+'emailfrom'           => 'မှ -',
+'emailto'             => 'သို့ -',
+'emailsubject'        => 'အကြောင်းအရာ -',
+'emailmessage'        => 'စာသား -',
+'emailsend'           => 'ပို့',
+'emailccme'           => 'ကျွန်ုပ်ပို့လိုက်သော အီးမေးကော်ပီကို ကျွန်ုပ်ထံ ပြန်ပို့ပါ။',
+'emailsent'           => 'အီးမေးပို့လိုက်ပြီ',
+'emailsenttext'       => 'သင့်အီးမေးမက်ဆေ့ကို ပို့လိုက်ပြီးပြီ ဖြစ်သည်။',
 
 # Watchlist
 'watchlist'         => 'စောင့်ကြည့်စာရင်း',
 'mywatchlist'       => 'စောင့်ကြည့်စာရင်း',
-'watchlistfor'      => "('''$1'''အတွက်)",
+'watchlistfor2'     => '$1 အတွက် $2',
 'nowatchlist'       => 'သင့်စောင့်ကြည့်စာရင်းမှာ ဘာမှ မရှိပါ။',
 'watchnologin'      => 'logged in ဝင်မထားပါ',
-'addedwatch'        => 'စောင့်ကြည့်စာရင်းသို့ ပေါင်းထည့်ပြီး',
 'addedwatchtext'    => '"[[:$1]]" စာမျက်နှာကို [[Special:Watchlist|စောင့်ကြည့်စာရင်း]]ထဲ ပေါင်းထည့်ပြီးဖြစ်သည်။ နောက်ပိုင်းအပြောင်းအလဲများနှင့် ၎င်းနှင့် ဆက်နွယ်နေသော ဆွေးနွေးချက် စာမျက်နှာကို ယင်းနေရာတွင် စာရင်းပြုစုထားမည် ဖြစ်သည်။ ရွေးချယ်ရ လွယ်ကူစေရန် စာမျက်နှာသည် [[Special:RecentChanges|လတ်တလော အပြောင်းအလဲများစာရင်း]]တွင် စာလုံးမည်းဖြင့် ပေါ်လာမည်ဖြစ်သည်။',
-'removedwatch'      => 'စောင့်ကြည့်စာရင်းမှ ဖယ်ရန်',
 'removedwatchtext'  => '"[[:$1]]" စာမျက်နှာကို [[Special:Watchlist|စောင့်ကြည့်စာရင်း]] မှ ဖယ်ထုတ်ပြီး ဖြစ်သည်။',
 'watch'             => 'စောင့်ကြည့်ရန်',
 'watchthispage'     => 'ဤစာမျက်နှာကို စောင့်ကြည့်ရန်',
@@ -1279,7 +1357,7 @@ HTML tags ကို စစ်ဆေးပါ။',
 ဤသို့ ဖျက်ပစ်ရန် သင် အမှန်တကယ် ရည်ရွယ်လျက်  နောက်ဆက်တွဲ အကျိုးဆက်များကို သိရှိနားလည်ပြီး [[{{MediaWiki:Policy-url}}|မူဝါဒ]] အတိုင်းလုပ်ဆောင်နေခြင်းဖြစ်ကြောင်းကို အတည်ပြုပေးပါ။',
 'actioncomplete'         => 'လုပ်ဆောင်ချက် ပြီးပြီ',
 'actionfailed'           => 'ဆောင်ရွက်မှုမအောင်မြင်ပါ',
-'deletedtext'            => '"<nowiki>$1</nowiki>" ကို ဖျက်ပစ်လိုက်ပြီးဖြစ်သည်။
+'deletedtext'            => '"$1" ကို ဖျက်ပစ်လိုက်ပြီးဖြစ်သည်။
 လတ်တလောဖျက်ထားသည်များ၏ မှတ်တမ်းကို $2 တွင် ကြည့်ပါ။',
 'deletedarticle'         => '[[$1]] ကို ဖျက်လိုက်သည်',
 'dellogpage'             => 'ဖျက်ထားသည်များ မှတ်တမ်း',
@@ -1301,7 +1379,7 @@ HTML tags ကို စစ်ဆေးပါ။',
 'protectexpiry'               => 'သက်တမ်းကုန်လွန်မည် -',
 'protect_expiry_invalid'      => 'သက်တမ်းကုန်လွန်မည့် အချိန်သည် တရားမဝင်ပါ။',
 'protect_expiry_old'          => 'သက်တမ်းသည် အတိတ်ကာလတွင် ကုန်လွန်ခဲ့ပြီး ဖြစ်သည်။',
-'protect-text'                => "'''<nowiki>$1</nowiki>''' စာမျက်နှာအတွက် ကာကွယ်မှုအဆင့်ကို ဤနေရာတွင် ကြည့်ရှုပြောင်းလဲနိုင်သည်။",
+'protect-text'                => "'''$1''' စာမျက်နှာအတွက် ကာကွယ်မှုအဆင့်ကို ဤနေရာတွင် ကြည့်ရှုပြောင်းလဲနိုင်သည်။",
 'protect-locked-access'       => "သင့်အကောင့်သည် စာမျက်နှာ၏ ကာကွယ်မှုအဆင့်ကို ပြောင်းလဲနိုင်ရန် ခွင့်ပြုချက် မရှိပါ။
 ဤသည်မှာ '''$1''' စာမျက်နှာအတွက် လက်ရှိ settings သတ်မှတ်ချက်များ ဖြစ်သည်။",
 'protect-cascadeon'           => 'ပြန်စီစဉ်ခြင်း cascading ကို ကာကွယ်ထားသော အောက်ပါ{{PLURAL:$1|စာမျက်နှာ|စာမျက်နှာများ}} ပါဝင်နေသောကြောင့် ဤစာမျက်နှာကို လက်ရှိတွင် ကာကွယ်ထားသည်။
@@ -1370,22 +1448,24 @@ HTML tags ကို စစ်ဆေးပါ။',
 'sp-contributions-newbies'     => 'အကောင့်အသစ်များ၏ ပံ့ပိုးမှုများကိုသာ ပြရန်',
 'sp-contributions-newbies-sub' => 'အကောင့်အသစ်များအတွက်',
 'sp-contributions-blocklog'    => 'ပိတ်ပင်တားဆီးမှု မှတ်တမ်း',
+'sp-contributions-uploads'     => 'အပ်လုပ်တင်ထားသည်များ',
 'sp-contributions-logs'        => 'မှတ်​တမ်း​များ​',
 'sp-contributions-talk'        => 'ဆွေးနွေးချက်',
 'sp-contributions-userrights'  => 'အသုံးပြုသူ၏ အခွင့်အရေးများကို စီမံခန့်ခွဲခြင်း',
 'sp-contributions-search'      => 'ပံ့ပိုးမှုများကို ရှာရန်',
 'sp-contributions-username'    => 'အိုင်ပီလိပ်စာ သို့ အသုံးပြုသူအမည် :',
+'sp-contributions-toponly'     => 'နောက်ဆုံးတည်းဖြတ်မူများသာပြရန်',
 'sp-contributions-submit'      => 'ရှာ​ဖွေ​ရန်​',
 
 # What links here
-'whatlinkshere'            => '',
+'whatlinkshere'            => 'ဘယ်ကလင့်ခ်ထားလဲ',
 'whatlinkshere-title'      => '"$1" ကို လင့်ထားသော စာမျက်နှာများ',
 'whatlinkshere-page'       => 'စာမျက်နှာ -',
 'linkshere'                => "အောက်ပါစာမျက်နှာများသည် '''[[:$1]]''' သို့ လင့်ထားသည် -",
 'nolinkshere'              => "'''[[:$1]]''' သို့ လင့်ထားသော စာမျက်နှာ မရှိပါ။",
 'isredirect'               => 'ပြန်ညွှန်းသော စာမျက်နှာ',
 'istemplate'               => 'ထည့်သွင်းကူးယူချက်',
-'isimage'                  => 'ပုံလင့်',
+'isimage'                  => 'ဖိုင်လင့်',
 'whatlinkshere-prev'       => '{{PLURAL:$1|နောက်သို့|နောက်သို့ $1}}',
 'whatlinkshere-next'       => '{{PLURAL:$1|ရှေ့သို့|ရှေ့သို့ $1}}',
 'whatlinkshere-links'      => '← လင့်များ',
@@ -1396,69 +1476,61 @@ HTML tags ကို စစ်ဆေးပါ။',
 'whatlinkshere-filters'    => 'စိစစ်မှုများ',
 
 # Block/unblock
-'blockip'                      => 'အသုံးပြုသူကို ပိတ်ပင်ရန်',
-'blockip-title'                => 'အသုံးပြုသူကို ပိတ်ပင်ရန်',
-'blockip-legend'               => 'အသုံးပြုသူကို ပိတ်ပင်ရန်',
-'ipaddress'                    => 'အိုင်ပီလိပ်စာ -',
-'ipadressorusername'           => 'အိုင်ပီလိပ်စာ သို့ အသုံးပြုသူအမည် -',
-'ipbexpiry'                    => 'သက်တမ်းကုန်လွန်ရက် -',
-'ipbreason'                    => 'အ​ကြောင်း​ပြ​ချက်:',
-'ipbreasonotherlist'           => 'အခြား အကြောင်းပြချက်',
-'ipbanononly'                  => 'အမည်မသိ အသုံးပြုသူများကိုသာ ပိတ်ပင်ရန်',
-'ipbcreateaccount'             => 'အကောင့်အသစ်ပြုလုပ်ခြင်းကို တားဆီးရန်',
-'ipbemailban'                  => 'အီးမေးပို့ခြင်းမှ အသုံးပြုသူကို တားဆီးရန်',
-'ipbsubmit'                    => 'ဤအသုံးပြုသူကို ပိတ်ပင်ရန်',
-'ipbother'                     => 'အခြားအချိန်:',
-'ipboptions'                   => '၂ နာရီ:2 hours,၁ ရက်:1 day,၃ ရက်:3 days,၁ ပတ်:1 week,၂ ပတ်:2 weeks,၁ လ:1 month,၃ လ:3 months,၆ လ:6 months,၁ နှစ်:1 year,အနန္တ:infinite',
-'ipbotheroption'               => 'အခြား',
-'ipbotherreason'               => 'အခြားသော/နောက်ထပ် အကြောင်းပြချက် -',
-'ipbhidename'                  => 'အသုံးပြုသူအမည်ကို တည်းဖြတ်မှုများနှင့် စာရင်းမှထဲတွင် ဝှက်ထားရန်',
-'ipbwatchuser'                 => 'ဤအသုံးပြုသူ၏စာမျက်နှနှင့် ဆွေးနွေးချက်တို့ကို စောင့်ကြည့်ရန်',
-'badipaddress'                 => 'တရားမဝင်သော IP address',
-'blockipsuccesssub'            => 'ပိတ်ပင်ခြင်း အောင်မြင်သည်',
-'ipb-edit-dropdown'            => 'ပိတ်ပင်ရသောအကြောင်းရင်းများ',
-'ipb-unblock-addr'             => '$1 ကို ပိတ်ထားရာမှ ပြန်ဖွင့်ရန်',
-'ipb-unblock'                  => 'အသုံးပြုသူအမည် သို့ IP address ကို ပိတ်ထားရာမှ ပြန်ဖွင့်ပေးရန်',
-'ipb-blocklist-addr'           => '$1 အတွက် ရှိနှင့်ပြီးသား ပိတ်ပင်မှုများ',
-'ipb-blocklist'                => 'ရှိနှင့်ပြီးသား ပိတ်ပင်မှုများကို ကြည့်ရန်',
-'ipb-blocklist-contribs'       => '$1 အတွက် ပံ့ပိုးမှုများ',
-'unblockip'                    => 'အသုံးပြုသူကို ပိတ်ပင်ထားရာမှ ပြန်ဖွင်ြ့ပေးရန်',
-'ipusubmit'                    => 'ဤပိတ်ပင်မှုကို ဖယ်ရှားရန်',
-'unblocked'                    => '[[User:$1|$1]] ကို ပိတ်ပင်ထားရာမှ ပြန်ဖွင့်ပေးလိုက်သည်',
-'unblocked-id'                 => '$1 ကို ပိတ်ပင်ထားမှုကို ဖယ်ရှာလိုက်သည်',
-'ipblocklist'                  => 'ပိတ်ပင်ထားသော အသုံးပြုသူများ',
-'ipblocklist-legend'           => 'ပိတ်ပင်ထားသော အသုံးပြုသူတစ်ဦးကို ရှာရန်',
-'ipblocklist-username'         => 'အသုံးပြုသူအမည် (သို့) IP address -',
-'ipblocklist-sh-userblocks'    => 'အကောင့်ပိတ်ပင်ထားမှုများကို $1ရန်',
-'ipblocklist-sh-tempblocks'    => 'ယာယီပိတ်ပင်ထားမှုများကို $1ရန်',
-'ipblocklist-sh-addressblocks' => 'IP တစ်ခုတည်းပိတ်ပင်ထားမှုများကို $1ရန်',
-'ipblocklist-submit'           => 'ရှာ​ဖွေ​ရန်​',
-'ipblocklist-otherblocks'      => 'အခြား ပိတ်ပင်ထားမှု{{PLURAL:$1|ခု|ခု}}',
-'blocklistline'                => '$1၊ $2က $3ကို ပိတ်ပင်လိုက်သည်။ ($4)',
-'infiniteblock'                => 'အကန့်အသတ်မရှိ',
-'expiringblock'                => '$1 ရက် $2 အချိန်တွင် သက်တမ်းကုန်မည်',
-'noautoblockblock'             => 'အလိုအလျောက်ပိတ်ပင်ခြင်းကို ပိတ်ထားရန်',
-'createaccountblock'           => 'အကောင့်ဖန်တီးခြင်းကို ပိတ်ထားသည်',
-'emailblock'                   => 'အီးမေးကို ပိတ်ပင်ထားသည်',
-'blocklist-nousertalk'         => 'မိမိ၏ဆွေးနွေးချက်စာမျက်နှာကို တည်းဖြတ်မရနိုင်ပါ',
-'ipblocklist-empty'            => 'ပိတ်ပင်ထားမှုစာရင်းသည် ဗလာဖြစ်နေသည်။',
-'blocklink'                    => 'တားဆီးကန့်သတ်ရန်',
-'unblocklink'                  => 'လင့် ပြန်ဖြေရန်',
-'change-blocklink'             => 'စာကြောင်းအမည် ပြောင်းရန်',
-'contribslink'                 => 'ပံ့ပိုး',
-'blocklogpage'                 => 'ပိတ်ပင်တားဆီးမှု မှတ်တမ်း',
-'blocklogentry'                => '[[$1]] ကို $2 ကြာအောင် ပိတ်ပင် တားဆီးလိုက်သည် $3',
-'unblocklogentry'              => '$1 ကို ပိတ်ထားရာမှ ပြန်ဖွင့်ရန်',
-'block-log-flags-anononly'     => 'အမည်မသိ အသုံးပြုသူများသာ',
-'block-log-flags-nocreate'     => 'အကောင့်ဖန်တီးခြင်းကို ပိတ်ထားသည်',
-'block-log-flags-noautoblock'  => 'အလိုအလျောက်ပိတ်ပင်ခြင်းကို ပိတ်ထားသည်',
-'block-log-flags-noemail'      => 'အီးမေးကို ပိတ်ပင်ထားသည်',
-'block-log-flags-nousertalk'   => 'မိမိ၏ဆွေးနွေးချက်စာမျက်နှာကို တည်းဖြတ်မရနိုင်ပါ',
-'block-log-flags-hiddenname'   => 'အသုံးပြုသူအမည် ဝှက်ထားသည်',
-'ipb_expiry_invalid'           => 'သက်တမ်းကုန်လွန်မည့် အချိန်သည် တရားမဝင်ပါ။',
-'ipb_already_blocked'          => '"$1" ကို အစကတည်းက ပိတ်ထားသည်',
-'blockme'                      => 'ကျွန်ုပ်ကို ပိတ်ရန်',
-'proxyblocksuccess'            => 'ပြီးပါပြီ။',
+'blockip'                     => 'အသုံးပြုသူကို ပိတ်ပင်ရန်',
+'blockip-title'               => 'အသုံးပြုသူကို ပိတ်ပင်ရန်',
+'blockip-legend'              => 'အသုံးပြုသူကို ပိတ်ပင်ရန်',
+'ipadressorusername'          => 'အိုင်ပီလိပ်စာ သို့ အသုံးပြုသူအမည် -',
+'ipbexpiry'                   => 'သက်တမ်းကုန်လွန်ရက် -',
+'ipbreason'                   => 'အ​ကြောင်း​ပြ​ချက်:',
+'ipbreasonotherlist'          => 'အခြား အကြောင်းပြချက်',
+'ipbcreateaccount'            => 'အကောင့်အသစ်ပြုလုပ်ခြင်းကို တားဆီးရန်',
+'ipbemailban'                 => 'အီးမေးပို့ခြင်းမှ အသုံးပြုသူကို တားဆီးရန်',
+'ipbsubmit'                   => 'ဤအသုံးပြုသူကို ပိတ်ပင်ရန်',
+'ipbother'                    => 'အခြားအချိန်:',
+'ipboptions'                  => '၂ နာရီ:2 hours,၁ ရက်:1 day,၃ ရက်:3 days,၁ ပတ်:1 week,၂ ပတ်:2 weeks,၁ လ:1 month,၃ လ:3 months,၆ လ:6 months,၁ နှစ်:1 year,အနန္တ:infinite',
+'ipbotheroption'              => 'အခြား',
+'ipbotherreason'              => 'အခြားသော/နောက်ထပ် အကြောင်းပြချက် -',
+'ipbhidename'                 => 'အသုံးပြုသူအမည်ကို တည်းဖြတ်မှုများနှင့် စာရင်းမှထဲတွင် ဝှက်ထားရန်',
+'ipbwatchuser'                => 'ဤအသုံးပြုသူ၏စာမျက်နှနှင့် ဆွေးနွေးချက်တို့ကို စောင့်ကြည့်ရန်',
+'badipaddress'                => 'တရားမဝင်သော IP address',
+'blockipsuccesssub'           => 'ပိတ်ပင်ခြင်း အောင်မြင်သည်',
+'ipb-edit-dropdown'           => 'ပိတ်ပင်ရသောအကြောင်းရင်းများ',
+'ipb-unblock-addr'            => '$1 ကို ပိတ်ထားရာမှ ပြန်ဖွင့်ရန်',
+'ipb-unblock'                 => 'အသုံးပြုသူအမည် သို့ IP address ကို ပိတ်ထားရာမှ ပြန်ဖွင့်ပေးရန်',
+'ipb-blocklist'               => 'ရှိနှင့်ပြီးသား ပိတ်ပင်မှုများကို ကြည့်ရန်',
+'ipb-blocklist-contribs'      => '$1 အတွက် ပံ့ပိုးမှုများ',
+'unblockip'                   => 'အသုံးပြုသူကို ပိတ်ပင်ထားရာမှ ပြန်ဖွင်ြ့ပေးရန်',
+'ipusubmit'                   => 'ဤပိတ်ပင်မှုကို ဖယ်ရှားရန်',
+'unblocked'                   => '[[User:$1|$1]] ကို ပိတ်ပင်ထားရာမှ ပြန်ဖွင့်ပေးလိုက်သည်',
+'unblocked-id'                => '$1 ကို ပိတ်ပင်ထားမှုကို ဖယ်ရှာလိုက်သည်',
+'ipblocklist'                 => 'ပိတ်ပင်ထားသော အသုံးပြုသူများ',
+'ipblocklist-legend'          => 'ပိတ်ပင်ထားသော အသုံးပြုသူတစ်ဦးကို ရှာရန်',
+'ipblocklist-submit'          => 'ရှာ​ဖွေ​ရန်​',
+'ipblocklist-otherblocks'     => 'အခြား ပိတ်ပင်ထားမှု{{PLURAL:$1|ခု|ခု}}',
+'infiniteblock'               => 'အကန့်အသတ်မရှိ',
+'expiringblock'               => '$1 ရက် $2 အချိန်တွင် သက်တမ်းကုန်မည်',
+'noautoblockblock'            => 'အလိုအလျောက်ပိတ်ပင်ခြင်းကို ပိတ်ထားရန်',
+'createaccountblock'          => 'အကောင့်ဖန်တီးခြင်းကို ပိတ်ထားသည်',
+'emailblock'                  => 'အီးမေးကို ပိတ်ပင်ထားသည်',
+'blocklist-nousertalk'        => 'မိမိ၏ဆွေးနွေးချက်စာမျက်နှာကို တည်းဖြတ်မရနိုင်ပါ',
+'ipblocklist-empty'           => 'ပိတ်ပင်ထားမှုစာရင်းသည် ဗလာဖြစ်နေသည်။',
+'blocklink'                   => 'တားဆီးကန့်သတ်ရန်',
+'unblocklink'                 => 'လင့် ပြန်ဖြေရန်',
+'change-blocklink'            => 'စာကြောင်းအမည် ပြောင်းရန်',
+'contribslink'                => 'ပံ့ပိုး',
+'blocklogpage'                => 'ပိတ်ပင်တားဆီးမှု မှတ်တမ်း',
+'blocklogentry'               => '[[$1]] ကို $2 ကြာအောင် ပိတ်ပင် တားဆီးလိုက်သည် $3',
+'unblocklogentry'             => '$1 ကို ပိတ်ထားရာမှ ပြန်ဖွင့်ရန်',
+'block-log-flags-anononly'    => 'အမည်မသိ အသုံးပြုသူများသာ',
+'block-log-flags-nocreate'    => 'အကောင့်ဖန်တီးခြင်းကို ပိတ်ထားသည်',
+'block-log-flags-noautoblock' => 'အလိုအလျောက်ပိတ်ပင်ခြင်းကို ပိတ်ထားသည်',
+'block-log-flags-noemail'     => 'အီးမေးကို ပိတ်ပင်ထားသည်',
+'block-log-flags-nousertalk'  => 'မိမိ၏ဆွေးနွေးချက်စာမျက်နှာကို တည်းဖြတ်မရနိုင်ပါ',
+'block-log-flags-hiddenname'  => 'အသုံးပြုသူအမည် ဝှက်ထားသည်',
+'ipb_expiry_invalid'          => 'သက်တမ်းကုန်လွန်မည့် အချိန်သည် တရားမဝင်ပါ။',
+'ipb_already_blocked'         => '"$1" ကို အစကတည်းက ပိတ်ထားသည်',
+'blockme'                     => 'ကျွန်ုပ်ကို ပိတ်ရန်',
+'proxyblocksuccess'           => 'ပြီးပါပြီ။',
 
 # Move page
 'move-page'                => '$1 ကို ရွှေ့ရန်',
@@ -1518,6 +1590,7 @@ HTML tags ကို စစ်ဆေးပါ။',
 # Namespace 8 related
 'allmessages'                   => 'စ​နစ်​၏​သ​တင်း​များ​',
 'allmessagesname'               => 'အမည်',
+'allmessagesdefault'            => 'ပုံမှန် အသိပေးချက် စာသား',
 'allmessages-filter-legend'     => 'စစ်ထုတ်ခြင်း',
 'allmessages-filter-unmodified' => 'မပြုပြင်ထားသော',
 'allmessages-filter-all'        => 'အားလုံး',
@@ -1607,29 +1680,14 @@ HTML tags ကို စစ်ဆေးပါ။',
 'tooltip-upload'                  => 'Upload တင်ခြင်း စတင်ရန်',
 'tooltip-rollback'                => '"နောက်ပြန် ပြန်သွားခြင်း" သည် ဤစာမျက်နှာ၏ နောက်ဆုံး တည်းဖြတ်မူသို့ ကလစ် တစ်ချက်ဖြင့် ပြန်ပြောင်းပေးသည်။',
 'tooltip-undo'                    => '"နောက်ပြန် ပြန်သွားခြင်း" သည် ဤ တည်းဖြတ်ခြင်းကို နောက်ပြန်ပြန်ဆုတ်ပြီး နမူနာပုံနှင့်တကွ တည်းဖြတ်ရန် ပြန်ဖွင့်မည် ဖြစ်သည်။ အဘယ်ကြောင့် နောက်ပြန်သွားသည်ကို အကျဉ်းချုပ် အကြောင်းပြချက် ရေးနိုင်သည်။',
+'tooltip-preferences-save'        => 'ရေးချယ်စရာများကို သိမ်းရန်',
+'tooltip-summary'                 => 'အတိုချုပ်ထည့်ရန်',
 
 # Attribution
 'others' => 'အခြား',
 
-# Info page
-'numedits'       => 'တည်းဖြတ်မှု အရေအတွက် (စာမျက်နှာ) - $1',
-'numtalkedits'   => 'တည်းဖြတ်မှုအရေအတွက် (ဆွေးနွေးချက် စာမျက်နှာ) - $1',
-'numwatchers'    => 'စောင့်ကြည့်သူ အရေအတွက် - $1',
-'numauthors'     => 'အဝေးရောက် စာရေးသူ အရေအတွက် - $1',
-'numtalkauthors' => 'အဝေးရောက် စာရေးသူ အရေအတွက် (ဆွေးနွေးချက်စာမျက်နှာ) - $1',
-
-# Math options
-'mw_math_png'    => 'PNG ဖိုင်အဖြစ် အမြဲပုံဖော်ရန်',
-'mw_math_simple' => 'လွန်စွာရိုးရှင်းပါက HTML အဖြစ် သို့မဟုတ်ပါက PNG အဖြစ်',
-'mw_math_html'   => 'ဖြစ်နိုင်လျှင် HTML သို့မဟုတ်ပါက PNG အဖြစ်',
-'mw_math_source' => 'TeX အဖြစ်ထားခဲ့ပါ (စာသားသာပြသည့် ဘရောက်ဇာများအတွက်)',
-'mw_math_modern' => 'ခေတ်ပေါ်ဘရောက်ဇာများအတွက် အကြံပြုသည်',
-
-# Math errors
-'math_unknown_error'    => 'အမည်မသိ အမှား',
-'math_unknown_function' => 'အမည်မသိ ဖန်ရှင်',
-
 # Patrol log
+'patrol-log-line' => '$3 စောင့်ကြည့်နေသော $2 ၏ $1 ကို မှတ်သားလိုက်သည်',
 'patrol-log-diff' => 'မူ $1',
 
 # Image deletion
@@ -1640,9 +1698,10 @@ HTML tags ကို စစ်ဆေးပါ။',
 'nextdiff'     => 'ပိုသစ်သော တည်းဖြတ်မှု',
 
 # Media information
-'file-nohires'         => '<small>သည်ထက်ကြီးသော resolution မရှိပါ.</small>',
-'show-big-image'       => 'resolution အပြည့်',
-'show-big-image-thumb' => '<small>နမူနာကြည့်ရန် အရွယ်အစား - $1 × $2 pixels</small>',
+'file-info-size' => '$1 × $2 pixels, ဖိုင်အရွယ်အစား - $3, MIME အမျိုးအစား $4',
+'file-nohires'   => '<small>သည်ထက်ကြီးသော resolution မရှိပါ.</small>',
+'svg-long-desc'  => 'SVG ဖိုင်, $1 × $2 pixels ကို အကြံပြုသည်, ဖိုင်အရွယ်အစား - $3',
+'show-big-image' => 'resolution အပြည့်',
 
 # Special:NewFiles
 'newimages'             => 'ပုံအသစ်များပြခန်း',
@@ -1667,7 +1726,7 @@ HTML tags ကို စစ်ဆေးပါ။',
 အကယ်၍ ဖိုင်ကို မူရင်းအခြေအနေမှ ပြုပြင်လိုက်ပါက အသေးစိတ်အချို့သည် ပြုပြင်ထားသောဖိုင်တွင် အပြည့်အစုံ ပြန်ပါလာမည်မဟုတ်။',
 'metadata-expand'   => 'ချဲ့ထားသော အသေးစိတ်များကို ပြရန်',
 'metadata-collapse' => 'ချဲ့ထားသော အသေးစိတ်များကို ပြရန်',
-'metadata-fields'   => 'metadata table ကို ဖွင့်ချလိုက်သောအခါ ဤမက်ဆေ့တွင် စာရင်းလုပ်ထားသော EXIF metadata fields သည် ပုံစာမျက်နှာပြရာတွင် ပါဝင်မည်ဖြစ်သည်။
+'metadata-fields'   => 'metadata table ကို ဖွင့်ချလိုက်သောအခါ ဤမက်ဆေ့တွင် စာရင်းလုပ်ထားသော Image metadata fields သည် ပုံစာမျက်နှာပြရာတွင် ပါဝင်မည်ဖြစ်သည်။
 အခြားအရာများကိုမူ ပုံမှန်အားဖြင့် ဝှက်ထားမည် ဖြစ်သည်။
 * make
 * model
@@ -1675,7 +1734,13 @@ HTML tags ကို စစ်ဆေးပါ။',
 * exposuretime
 * fnumber
 * isospeedratings
-* focallength',
+* focallength
+* artist
+* copyright
+* imagedescription
+* gpslatitude
+* gpslongitude
+* gpsaltitude',
 
 # EXIF tags
 'exif-imagewidth'          => 'အကျယ်',
@@ -1689,7 +1754,6 @@ HTML tags ကို စစ်ဆေးပါ။',
 'exif-copyright'           => 'မူပိုင်ခွင့်ပိုင်ရှင်',
 'exif-pixelydimension'     => 'တရားဝင်ပုံအကျယ်',
 'exif-pixelxdimension'     => 'တရားဝင် ပုံအမြင့်',
-'exif-makernote'           => 'ထုတ်လုပ်သူမှတ်ချက်များ',
 'exif-usercomment'         => 'အသုံးပြုသူ မှတ်ချက်များ',
 'exif-relatedsoundfile'    => 'ဆက်နွယ်သော အသံဖိုင်',
 'exif-datetimeoriginal'    => 'ဒေတာဖန်တီးခဲ့သော နေ့စွဲနှင့် အချိန်',
@@ -1748,15 +1812,13 @@ HTML tags ကို စစ်ဆေးပါ။',
 
 # External editor support
 'edit-externally'      => 'ပြင်ပ application တစ်ခုခုကိုသုံး၍ ဤဖိုင်ကို ပြင်ရန်',
-'edit-externally-help' => '(နောက်ထပ်သတင်းအချက်အလက်များအတွက်[http://www.mediawiki.org/wiki/Manual:External_editors တပ်ဆင်မှု လမ်းညွှန်များ] ကို ကြည့်ရန်)',
+'edit-externally-help' => '(နောက်ထပ်သတင်းအချက်အလက်များအတွက်[//www.mediawiki.org/wiki/Manual:External_editors တပ်ဆင်မှု လမ်းညွှန်များ] ကို ကြည့်ရန်)',
 
 # 'all' in various places, this might be different for inflected languages
-'recentchangesall' => 'အားလုံး',
-'imagelistall'     => 'အားလုံး',
-'watchlistall2'    => 'အားလုံး',
-'namespacesall'    => 'အားလုံး',
-'monthsall'        => 'အားလုံး',
-'limitall'         => 'အားလုံး',
+'watchlistall2' => 'အားလုံး',
+'namespacesall' => 'အားလုံး',
+'monthsall'     => 'အားလုံး',
+'limitall'      => 'အားလုံး',
 
 # E-mail address confirmation
 'confirmemail'      => 'အီးမေးကိုအတည်ပြုပါ',
@@ -1783,8 +1845,9 @@ HTML tags ကို စစ်ဆေးပါ။',
 'table_pager_empty'        => 'မည်သည့်ရလဒ်မှ မရှိပါ',
 
 # Auto-summaries
-'autosumm-blank' => 'စာမျက်နှာကို ဗလာလုပ်လိုက်သည်',
-'autosumm-new'   => '"$1" အစချီသော စာလုံးတို့နှင့် စာမျက်နှာကို ဖန်တီးလိုက်သည်',
+'autosumm-blank'   => 'စာမျက်နှာကို ဗလာလုပ်လိုက်သည်',
+'autoredircomment' => 'စာမျက်နှာကို [[$1]] သို့ ပြန်ညွှန်းလိုက်သည်',
+'autosumm-new'     => '"$1" အစချီသော စာလုံးတို့နှင့် စာမျက်နှာကို ဖန်တီးလိုက်သည်',
 
 # Watchlist editor
 'watchlistedit-normal-title'  => 'စောင့်ကြည့်စာရင်းကို တည်းဖြတ်ရန်',
@@ -1796,6 +1859,9 @@ HTML tags ကို စစ်ဆေးပါ။',
 'watchlisttools-view' => 'ကိုက်ညီသော အပြောင်းအလဲများကို ကြည့်ရန်',
 'watchlisttools-edit' => 'စောင့်ကြည့်စာရင်းများကို ကြည့်ပြီး တည်းဖြတ်ပါ။',
 'watchlisttools-raw'  => 'စောင့်ကြည့်စာရင်း အကြမ်းကို တည်းဖြတ်ရန်',
+
+# Core parser functions
+'duplicate-defaultsort' => '\'\'\'သတိပေးချက် -\'\'\' ပုံမှန် sort key "$2" oသည် ယခင်ပုံမှန်ဖြစ်သော sort key "$1" ကို override ထပ်ရေးမည်ဖြစ်သည်.',
 
 # Special:Version
 'version'                  => 'ဗားရှင်း',
@@ -1836,12 +1902,32 @@ HTML tags ကို စစ်ဆေးပါ။',
 'blankpage'              => 'ဗလာစာမျက်နှာ',
 'intentionallyblankpage' => 'ဤစာမျက်နှာသည် တမင်ရည်ရွယ်ချက်ရှိရှိ ဗလာထားခဲ့ခြင်း ဖြစ်သည်။',
 
+# External image whitelist
+'external_image_whitelist' => ' #ဤစာကြောင်းကို ဤအတိုင်းထားပါ<pre>
+#regular expression fragments ကို(// နှစ်ခုကြားရှိ အစိတ်အပိုင်းသာ) အောက်တွင်ထားပါ
+#ယင်းတို့ကို external (hotlinked) ပုံတို့၏URL များနှင့် တွဲညှိပေးမည်ဖြစ်သည်
+#ကိုက်ညီသည်များကို ပုံအဖြစ်ပြမည်ဖြစ်ပြီး မကိုက်ညီပါက ပုံထံပြန်ညွှန်းသည့် လင့်အဖြစ်သာပြမည်ဖြစ်သည်
+## နှင့်စသော စာကြောင်းများကို ကွန်းမန့်အဖြစ် ယူဆမည်ဖြစ်သည်
+#ဤသည်တွင် အက္ခရာအကြီးအသေး မှန်ကန်ရမည်ဖြစ်သည်
+
+#regex fragments အားလုံးကို စာကြောင်း၏အပေါ်တွင်ထားပါ။ ဤစာကြောင်းကို ဤအတိုင်းထားပါ</pre>',
+
 # Special:Tags
 'tags'              => 'အသုံးပြုနေသော အပြောင်းအလဲစာတွဲများ',
+'tag-filter'        => '[[Special:Tags|Tag]] သီးသန့်စစ်ထုတ်ရန် -',
 'tag-filter-submit' => 'စိစစ်မှု',
 'tags-title'        => 'အမည်တွဲ',
 'tags-tag'          => 'အမည်တွဲ အမည်',
 'tags-edit'         => 'ပြင်​ဆင်​ရန်',
+
+# Special:ComparePages
+'comparepages'     => 'စာမျက်နှာများကို နှုိင်းယှဉ်ရန်',
+'compare-selector' => 'စာမျက်နှာမူများကို နှုိင်းယှဉ်ရန်',
+'compare-page1'    => 'စာမျက်နှာတစ်',
+'compare-page2'    => 'စာမျက်နှာနှစ်',
+'compare-rev1'     => 'မူ တစ်',
+'compare-rev2'     => 'မူ နှစ်',
+'compare-submit'   => 'နှိုင်းယှဉ်ရန်',
 
 # Database error messages
 'dberr-header'   => 'ဤဝီကီတွင် ပြဿနာတစ်ခု ရှိနေသည်',
@@ -1849,6 +1935,7 @@ HTML tags ကို စစ်ဆေးပါ။',
 ဤဆိုက်သည် နည်းပညာပိုင်းဆိုင်ရာ အခက်အခဲများ ကြုံတွေ့နေရပါသည်။',
 
 # HTML forms
+'htmlform-required'            => 'ဤတန်ဖိုး လိုအပ်သည်',
 'htmlform-submit'              => 'ထည့်သွင်းရန်',
 'htmlform-reset'               => 'ပြောင်းလဲထားသည်များ မလုပ်တော့ရန်',
 'htmlform-selectorother-other' => 'အခြား',

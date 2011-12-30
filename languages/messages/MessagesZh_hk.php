@@ -11,6 +11,7 @@
  * @author Kayau
  * @author Mark85296341
  * @author PhiLiP
+ * @author Shizhao
  * @author Waihorace
  * @author Wong128hk
  * @author Yukiseaside
@@ -20,6 +21,12 @@
 $fallback = 'zh-hant';
 
 $fallback8bitEncoding = 'Big5-HKSCS';
+
+$specialPageAliases = array(
+	'ComparePages'              => array( '頁面比較' ),
+	'RevisionMove'              => array( '移動版本' ),
+	'Unblock'                   => array( '解除封禁' ),
+);
 
 $messages = array(
 # User preference toggles
@@ -39,42 +46,23 @@ $messages = array(
 'november'  => '十一月',
 'december'  => '十二月',
 
-'mainpagedocfooter' => '請參閱[http://meta.wikimedia.org/wiki/Help:Contents 用戶手冊]以獲得使用此 wiki 軟件的訊息！
-
-== 入門 ==
-* [http://www.mediawiki.org/wiki/Manual:Configuration_settings MediaWiki 配置設定清單]
-* [http://www.mediawiki.org/wiki/Manual:FAQ MediaWiki 常見問題解答]
-* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki 發佈郵件清單]',
-
-'mytalk'     => '我的討論頁',
-'navigation' => '導航',
+'mytalk' => '我的討論頁',
 
 'tagline'          => '從 {{SITENAME}}',
 'search'           => '搜尋',
-'searchbutton'     => '搜尋',
-'searcharticle'    => '進入',
 'printableversion' => '可打印版',
 'permalink'        => '永久連接',
 'print'            => '打印',
-'edit'             => '編輯',
-'talkpagelinktext' => '對話',
 'specialpage'      => '特殊頁面',
-'personaltools'    => '個人工具',
-'toolbox'          => '工具箱',
 'jumpto'           => '跳到：',
-'jumptonavigation' => '導航',
 'jumptosearch'     => '搜尋',
 
 # All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
-'aboutsite'   => '關於 {{SITENAME}}',
 'aboutpage'   => 'Project:關於我們',
-'mainpage'    => '首頁',
-'portal'      => '社群入口',
 'privacy'     => '私隱政策',
 'privacypage' => 'Project:私隱政策',
 
-'editsectionhint' => '編輯段落: $1',
-'red-link-title'  => '$1 (頁面不存在)',
+'red-link-title' => '$1 (頁面不存在)',
 
 # Short words for each namespace, by default used in the namespace tab in monobook
 'nstab-special' => '特殊頁面',
@@ -83,10 +71,16 @@ $messages = array(
 'nav-login-createaccount' => '登入／創造帳戶',
 'userlogin'               => '登入／創造帳戶',
 
+# Edit pages
+'editing' => '正在編輯 $1',
+
 # Revision deletion
+'rev-deleted-comment'     => '（註釋已除）',
+'rev-deleted-event'       => '（日誌已除）',
 'revdelete-suppress-text' => "壓制'''只'''應用於以下的情況:
 * 不合適的個人資料
 *: ''地址、電話號碼、身份證號碼等。''",
+'revdelete-logentry'      => '已更改「[[$1]]」之修訂可見度',
 
 # Diffs
 'editundo' => '撤銷',
@@ -105,9 +99,8 @@ $messages = array(
 'grouppage-bot' => '{{ns:project}}:機械人',
 
 # Recent changes
-'recentchanges-legend-bot' => '$1 - 機械人編輯',
-'recentchanges-label-bot'  => '這次編輯是由機械人進行',
-'rcshowhidebots'           => '$1機械人的編輯',
+'recentchanges-label-bot' => '這次編輯是由機械人進行',
+'rcshowhidebots'          => '$1機械人的編輯',
 
 # Special:ActiveUsers
 'activeusers-hidebots' => '隱藏機械人',

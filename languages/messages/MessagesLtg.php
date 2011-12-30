@@ -10,7 +10,27 @@
  * @author Dark Eagle
  * @author Gleb Borisov
  * @author Jureits
+ * @author Reedy
  */
+
+$namespaceNames = array(
+	NS_MEDIA            => 'Medeja',
+	NS_SPECIAL          => 'Seviškuo',
+	NS_TALK             => 'Sprīža',
+	NS_USER             => 'Lītuotuojs',
+	NS_USER_TALK        => 'Sprīža_ap_lītuotuoju',
+	NS_PROJECT_TALK     => 'Sprīža_ap_{{GRAMMAR:accusative|$1}}',
+	NS_FILE             => 'Fails',
+	NS_FILE_TALK        => 'Sprīža_ap_failu',
+	NS_MEDIAWIKI        => 'MediaWiki',
+	NS_MEDIAWIKI_TALK   => 'Sprīža_ap_MediaWiki',
+	NS_TEMPLATE         => 'Taiss',
+	NS_TEMPLATE_TALK    => 'Sprīža_ap_taisu',
+	NS_HELP             => 'Paleigs',
+	NS_HELP_TALK        => 'Sprīža_ap_paleigu',
+	NS_CATEGORY         => 'Kategoreja',
+	NS_CATEGORY_TALK    => 'Sprīža_ap_kategoreju',
+);
 
 $fallback = 'lv';
 
@@ -107,27 +127,21 @@ $messages = array(
 'faqpage'        => 'Project:BUV',
 
 # Vector skin
-'vector-action-addsection'   => 'Dalikt padaļu',
-'vector-action-delete'       => 'Iztreit',
-'vector-action-move'         => 'Puorceļt',
-'vector-action-protect'      => 'Apsorguot',
-'vector-action-unprotect'    => 'Nūjimt apsardzeibu',
-'vector-namespace-category'  => 'Kategoreja',
-'vector-namespace-image'     => 'Fails',
-'vector-namespace-mediawiki' => 'Viestejums',
-'vector-namespace-project'   => 'Projekta puslopa',
-'vector-namespace-special'   => 'Specialuo puslopa',
-'vector-namespace-talk'      => 'Sprīža',
-'vector-namespace-template'  => 'Taiss',
-'vector-view-edit'           => 'Pataiseit',
-'vector-view-history'        => 'Viesture',
-'vector-view-view'           => 'Vērtīs',
-'namespaces'                 => 'Vuordu pluoti',
-'variants'                   => 'Varianti',
+'vector-action-addsection' => 'Dalikt padaļu',
+'vector-action-delete'     => 'Iztreit',
+'vector-action-move'       => 'Puorceļt',
+'vector-action-protect'    => 'Apsorguot',
+'vector-action-unprotect'  => 'Puormeit apsardzeibu',
+'vector-view-edit'         => 'Pataiseit',
+'vector-view-history'      => 'Viesture',
+'vector-view-view'         => 'Vērtīs',
+'actions'                  => 'Darbeibys',
+'namespaces'               => 'Vuordu pluoti',
+'variants'                 => 'Varianti',
 
 'errorpagetitle'   => 'Klaida',
 'returnto'         => 'Grīztīs da puslopys $1.',
-'tagline'          => 'Nu {{SITENAME}}',
+'tagline'          => 'Materials nu {{grammar:genitive|{{SITENAME}}}}',
 'help'             => 'Paleigs',
 'search'           => 'Maklātivs',
 'searchbutton'     => 'Meklēt',
@@ -135,10 +149,10 @@ $messages = array(
 'searcharticle'    => 'Īt',
 'history'          => 'Puslopys viesture',
 'history_short'    => 'Viesture',
-'info_short'       => 'Informaceja',
 'printableversion' => 'Verseja drukavuošonai',
 'permalink'        => 'Nūtaleja nūruode',
 'print'            => 'Drukavuot',
+'view'             => 'Vērtīs',
 'edit'             => 'Pataiseit',
 'create'           => 'Sataiseit',
 'editthispage'     => 'Pataiseit itū puslopu',
@@ -148,7 +162,7 @@ $messages = array(
 'protect'          => 'Apsorguot',
 'protect_change'   => 'puormeit',
 'protectthispage'  => 'Apsorguot itū puslopu',
-'unprotect'        => 'Nūjimt apsardzeibu',
+'unprotect'        => 'Puormeit apsardzeibu',
 'newpage'          => 'Jauna puslopa',
 'talkpage'         => 'Apmīgt itū puslopu',
 'talkpagelinktext' => 'sprīža',
@@ -238,7 +252,7 @@ Par to var ziņuot [[Special:ListUsers/sysop|kaidam administratoram]], nūruodū
 # Login and logout pages
 'yourname'                => 'Slāgvuords:',
 'yourpassword'            => 'Paroļs:',
-'remembermypassword'      => 'Atguoduot munu paroli iz ituo datora',
+'remembermypassword'      => 'Atguoduot muni  iz ituo datora (na vaira kai $1 {{PLURAL:$1|dīnu|dīnom|dīnom}})',
 'login'                   => 'Dasaslāgt',
 'nav-login-createaccount' => 'Dasaslāgt / sataiseit jaunu lītuotuoju',
 'userlogin'               => 'Dasaslāgt / sataiseit jaunu lītuotuoju',
@@ -248,12 +262,18 @@ Par to var ziņuot [[Special:ListUsers/sysop|kaidam administratoram]], nūruodū
 'nologinlink'             => 'Registrētīs',
 'createaccount'           => 'Sataiseit jaunu lītuotuoju',
 'gotaccountlink'          => 'Dasaslāgt',
+'createaccountreason'     => 'Īmesle:',
 'mailmypassword'          => 'Atsyuteit maņ jaunu paroli',
 'loginlanguagelabel'      => 'Volūda: $1',
 
-# Password reset dialog
-'resetpass_text'          => '<!-- Dalikt tekstu ite -->',
-'resetpass-submit-cancel' => 'Atsaukt',
+# Change password dialog
+'resetpass_text'            => '<!-- Dalikt tekstu ite -->',
+'resetpass-submit-loggedin' => 'Puormeit paroļu',
+'resetpass-submit-cancel'   => 'Atsaukt',
+
+# Special:PasswordReset
+'passwordreset-username' => 'Slāgvuords:',
+'passwordreset-email'    => 'E-posta adress:',
 
 # Edit page toolbar
 'bold_sample'     => 'Pamalnais roksts',
@@ -266,8 +286,6 @@ Par to var ziņuot [[Special:ListUsers/sysop|kaidam administratoram]], nūruodū
 'extlink_tip'     => 'Uorejuo saite (naaizmierst suokumā dalikt "http://")',
 'headline_sample' => 'Viersroksta teksts',
 'headline_tip'    => '2 leidzīņa viersroksts',
-'math_sample'     => 'Formulu īrokst ite',
-'math_tip'        => 'Matematiska formula (LaTeX)',
 'nowiki_sample'   => 'Ite rokst naformatietu tekstu',
 'nowiki_tip'      => 'Najimt vārā wiki formatiejumu',
 'image_sample'    => 'Paraugs.jpg',
@@ -389,30 +407,43 @@ n = nasvareigs lobuojums.',
 'powersearch-togglenone'    => 'Nikas',
 
 # Preferences page
-'preferences'      => 'Īstatejumi',
-'mypreferences'    => 'Muni īstatejumi',
-'datedefault'      => 'Piec nūklusiejuma',
-'prefs-datetime'   => 'Data i laiks',
-'saveprefs'        => 'Izglobuot',
-'timezonelegend'   => 'Laika zona:',
-'prefs-namespaces' => 'Vuordu pluoti',
-'username'         => 'Slāgvuords:',
-'uid'              => 'Lītuotuoja ID:',
-'yourlanguage'     => 'Volūda:',
-'yourgender'       => 'Kuorta:',
-'gender-unknown'   => 'Nava nūruodeits',
-'gender-male'      => 'Veirīts',
-'gender-female'    => 'Sīvīts',
-'prefs-info'       => 'Pamatinformaceja',
+'preferences'           => 'Īstatejumi',
+'mypreferences'         => 'Muni īstatejumi',
+'changepassword'        => 'Puormeit paroļu',
+'datedefault'           => 'Piec nūklusiejuma',
+'prefs-datetime'        => 'Data i laiks',
+'saveprefs'             => 'Izglobuot',
+'timezonelegend'        => 'Laika zona:',
+'localtime'             => 'Vītejais laiks:',
+'timezoneregion-africa' => 'Afrika',
+'timezoneregion-asia'   => 'Azeja',
+'timezoneregion-europe' => 'Europa',
+'prefs-namespaces'      => 'Vuordu pluoti',
+'prefs-files'           => 'Faili',
+'youremail'             => 'Tovs e-posta adress:',
+'username'              => 'Slāgvuords:',
+'uid'                   => 'Lītuotuoja ID:',
+'yourrealname'          => 'Jiusu eistyns vuords:',
+'yourlanguage'          => 'Volūda:',
+'yourgender'            => 'Kuorta:',
+'gender-unknown'        => 'Nava nūruodeits',
+'gender-male'           => 'Veirīts',
+'gender-female'         => 'Sīvīts',
+'email'                 => 'E-posts',
+'prefs-info'            => 'Pamatinformaceja',
+'prefs-signature'       => 'Paroksts',
 
 # Groups
 'group'       => 'Grupa:',
 'group-user'  => 'Lītuotuoji',
 'group-bot'   => 'Boti',
 'group-sysop' => 'Administratori',
+'group-all'   => '(vysi)',
 
-'group-user-member'  => 'lītuotuojs',
-'group-sysop-member' => 'Administrators',
+'group-user-member'       => 'lītuotuojs',
+'group-bot-member'        => 'robots',
+'group-sysop-member'      => 'administrators',
+'group-bureaucrat-member' => 'birokrats',
 
 'grouppage-user'  => '{{ns:project}}:Lītuotuoji',
 'grouppage-bot'   => '{{ns:project}}:Boti',
@@ -421,6 +452,7 @@ n = nasvareigs lobuojums.',
 # Rights
 'right-upload'        => 'Īsyuteit failus',
 'right-upload_by_url' => 'Īsyuteit failu nu URL adresa',
+'right-delete'        => 'Iztreit puslopys',
 
 # User rights log
 'rightslog'  => 'Lītuotuoju tīseibu registrs',
@@ -573,12 +605,9 @@ Lopys, kas ir tovā [[Special:Watchlist|puorraugamūs rokstu sarokstā]] ir '''r
 # Watchlist
 'watchlist'         => 'Muns davēris saroksts',
 'mywatchlist'       => 'Muns davēris saroksts',
-'watchlistfor'      => "(deļ '''$1''')",
-'addedwatch'        => 'Davīnuots puorraugamū sarokstam.',
 'addedwatchtext'    => "Lopa \"[[:\$1]]\" ir davīnuota [[Special:Watchlist|tevis puorraugamajom lopom]], kur tiks paruodeitys izmainis, kas izdareitys itymā lopā voi ituos lopys sarunu lopā, kai ari itei lopa tiks īzeimāta '''pusrasna''' [[Special:RecentChanges|pādejūs izmaiņu lopā]], lai itū byutu vīgluok pamaneit.
 
 Ka vāluok puordūmuosi i nagribiesi vairs puorraudzeit itū lopu, spīd iz saitis '''napuorraudzeit''' reiku jūslā.",
-'removedwatch'      => 'Lopa vairs nateik puorraudzeita',
 'removedwatchtext'  => 'Lopa "[[:$1]]" ir izjimta nu tova [[Special:Watchlist|puorraugamūs lopu saroksta]].',
 'watch'             => 'Puorraudzeit',
 'watchthispage'     => 'Puorraudzeit itū lopu',
@@ -597,7 +626,7 @@ Ka vāluok puordūmuosi i nagribiesi vairs puorraudzeit itū lopu, spīd iz sait
 'excontentauthor'       => 'turīņs beja: "$1" (vīneigais autors: [[Special:Contributions/$2|$2]])',
 'confirmdeletetext'     => 'Tu tagad nu datu bazys iztreisi lopu voi biļdi, kai ari tūs īprīškejuos versejis. Lyudzu, apstypryni, ka tu pa eistam tū gribi dareit, ka tu saprūt, ka tū dori i atbylstūši [[{{MediaWiki:Policy-url}}|nūsacejumim]].',
 'actioncomplete'        => 'Darbeiba pabeigta',
-'deletedtext'           => '"<nowiki>$1</nowiki>" beja iztreits.
+'deletedtext'           => '"$1" beja iztreits.
 Kab apsavērtu pādejuo iztreitū sarokstu, verīs $2.',
 'deletedarticle'        => 'dzāsts "[[$1]]"',
 'dellogpage'            => 'Iztreišonys registris',
@@ -617,7 +646,7 @@ Kab apsavērtu pādejuo iztreitū sarokstu, verīs $2.',
 'protectexpiry'               => 'Izabeidz:',
 'protect_expiry_invalid'      => 'Beigu termiņš ir nadereigs.',
 'protect_expiry_old'          => 'Beigu termiņš jau paguojs.',
-'protect-text'                => "Ite var apsavērt i izmaineit lopys '''<nowiki>$1</nowiki>''' aizsardzeibys leimini.",
+'protect-text'                => "Ite var apsavērt i izmaineit lopys '''$1''' aizsardzeibys leimini.",
 'protect-locked-access'       => "Jiusu kontam nav atļuovis maineit lopys aizsardzeibys pakuopi.
 Pašreizejī lopys '''$1''' īstatejumi ir:",
 'protect-cascadeon'           => 'Itei lopa niu ir aizsorguota, deļ tam ka tei ir īlykta {{PLURAL:$1|itadā lopā|itaiduos lopuos}} (mainūt ituos lopys aizsardzeibys leimini tuos aizsardzeiba nabyus nūjimta):',
@@ -666,7 +695,7 @@ Pašreizejī lopys '''$1''' īstatejumi ir:",
 'linkshere'                => "Itamuos lopuos ir nūruodis iz lopu '''[[:$1]]''':",
 'isredirect'               => 'puoradresiešonys puslopa',
 'istemplate'               => 'izsaukts',
-'isimage'                  => 'atvaiga saita',
+'isimage'                  => 'Faila saita',
 'whatlinkshere-prev'       => '{{PLURAL:$1|īprīškejū|īprīškejūs $1}}',
 'whatlinkshere-next'       => '{{PLURAL:$1|nuokamū|nuokamūs $1}}',
 'whatlinkshere-links'      => '← saitys',
@@ -813,11 +842,10 @@ Tys ļaun davīnuot pamatuojumu kūpsavylkumā.',
 'nextdiff'     => 'Jaunuokuo verseja →',
 
 # Media information
-'file-info-size'       => '($1 × $2 pikseli, faila izmārs: $3, MIME tips: $4)',
-'file-nohires'         => '<small>Augstuoka izškirtspieja nav pīejama.</small>',
-'svg-long-desc'        => '(SVG fails, definātais lelums $1 × $2 pikseli, faila lelums: $3)',
-'show-big-image'       => 'Pylnā lelumā',
-'show-big-image-thumb' => '<small>Ituo pyrmsskota lelums: $1 × $2 pikseli</small>',
+'file-info-size' => '$1 × $2 pikseli, faila izmārs: $3, MIME tips: $4',
+'file-nohires'   => '<small>Augstuoka izškirtspieja nav pīejama.</small>',
+'svg-long-desc'  => 'SVG fails, definātais lelums $1 × $2 pikseli, faila lelums: $3',
+'show-big-image' => 'Pylnā lelumā',
 
 # Special:NewFiles
 'newimages-legend' => 'Fiļtris',
@@ -839,19 +867,23 @@ Puorejī lauki, piec nūklusiejuma, byus nūglobuoti.
 * exposuretime
 * fnumber
 * isospeedratings
-* focallength',
+* focallength
+* artist
+* copyright
+* imagedescription
+* gpslatitude
+* gpslongitude
+* gpsaltitude',
 
 # External editor support
 'edit-externally'      => 'Izmaineit itū failu ar uoreju programu',
-'edit-externally-help' => '(Verīs [http://www.mediawiki.org/wiki/Manual:External_editors instrukcijas] Mediawiki.org, kab dabuotu vaira informacejis).',
+'edit-externally-help' => '(Verīs [//www.mediawiki.org/wiki/Manual:External_editors instrukcijas] Mediawiki.org, kab dabuotu vaira informacejis).',
 
 # 'all' in various places, this might be different for inflected languages
-'recentchangesall' => 'vysi',
-'imagelistall'     => 'vysi',
-'watchlistall2'    => 'vysys',
-'namespacesall'    => 'vysys',
-'monthsall'        => 'vysi',
-'limitall'         => 'vysys',
+'watchlistall2' => 'vysys',
+'namespacesall' => 'vysys',
+'monthsall'     => 'vysi',
+'limitall'      => 'vysys',
 
 # Watchlist editing tools
 'watchlisttools-view' => 'Apsavērt atbylstūšuos izmainis',
@@ -863,6 +895,7 @@ Puorejī lauki, piec nūklusiejuma, byus nūglobuoti.
 'version-specialpages'     => 'Specialuos puslopys',
 'version-version'          => '(Verseja $1)',
 'version-license'          => 'Liceņceja',
+'version-poweredby-others' => 'cyti',
 'version-software-product' => 'Produkts',
 'version-software-version' => 'Verseja',
 
